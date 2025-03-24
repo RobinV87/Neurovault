@@ -1,0 +1,24 @@
+# Ignore Obsidian workspace layout + cache
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/cache
+
+# Optional: Ignore all Obsidian plugin settings (if you want per-device plugin setups)
+.obsidian/plugins/
+.obsidian/snippets/
+
+# macOS & Windows system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs or temp dumps
+*.log
+*.tmp
+*.bak
+
+# Node / Python / Shell artifacts (if you're coding inside the vault)
+node_modules/
+__pycache__/
+*.pyc
+.env
