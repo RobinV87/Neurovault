@@ -10,8 +10,11 @@
 ## Associate
 
 - [ ] AZ-500 - Azure Security Engineer Associate
-- [ ] SC-100 - Cybersecurity Expert
 - [ ] SC-200 - Security Operations Analyst
 - [ ] SC-300 - Identity & Access Administrator
 - [ ] SC-400 - Information Protection Administration
-- [ ] SC-401 - 
+- [ ] SC-401 - Information Protection and Compliance Adminstrator Associate
+
+## Expert
+
+- [ ] SC-100 - Microsoft Cybersecurity Architect
