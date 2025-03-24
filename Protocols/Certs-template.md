@@ -1,4 +1,4 @@
-# 🧠 Certfile: {{certification-name}}
+# 🧠 Certfile: {{certification-name}} (e.g. AZ-900)
 
 ## 🎯 Objective
 > Why are you getting this cert? (Career path, job requirement, skill boost)
