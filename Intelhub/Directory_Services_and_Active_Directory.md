@@ -1,0 +1,12 @@
+- A directory is a hierachical structure that stores information about objects on the network.
+- A directory service stores directory data and makes it available to:
+  - Network Users
+  - Administrators
+  - Services
+  - Applications
+
+- Active Directory (AD) is a set of directory services developed by Microsoft with Windows 2000.
+- The best-known service is Active Directory Domain Services (AD DS)
+- It stores information about members of the main, including devices and users
+- Verifies their crendentials, and defines their access rights.
+- A server running AD DS is a Domain Controller (DC)
