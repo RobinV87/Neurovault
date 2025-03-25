@@ -1,12 +1,15 @@
 # 🧠 Cyber Warrior Character Sheet
 
+---
+
 ## 🪪 Identity
+
 **Name:** Ghostroot  
-**Codename:** ARCANA.NODE 
-**Role:** Tier I Operator - Purple Team Track 
+**Codename:** ARCANA.NODE  
+**Role:** Tier I Operator – Purple Team Track  
 **Affiliation:** Cloud Een  
 **Track:** Purple Team (Shadow Red Initiate)  
-**Campaign Start Date:** [25-03-2025]
+**Campaign Start Date:** 25-03-2025
 
 ---
 
@@ -21,8 +24,7 @@
 | 🧘 Mental Fortitude  | 30    | Stress, frustration, recovery |
 | 🧩 Problem Solving   | 40    | Ad-hoc fixes, puzzle solving, logic |
 
-**Unspent Stat Points:** 0  
-*→ Earned by leveling up or through major achievements.*
+**Unspent Stat Points:** 0
 
 ---
 
@@ -31,27 +33,27 @@
 **Current XP:** 60 / 100  
 **Level:** 1  
 **Progress Bar:** ▓▓▓▓▓▓░░░░ (60%)  
-**Next Level Bonus:** +10 Stat Points, New Title
+**Next Level Bonus:** +10 Stat Points, Title Upgrade
 
 ---
 
 ## 🏅 Titles & Milestones
 
-| Level | Title                  | Date Earned | Description |
-|-------|------------------------|-------------|-------------|
-| 1     | Junior Operative       | 2025-03-25  | Logged and analyzed first Corelog as XP source |
+| Level | Title            | Date Earned | Description                                   |
+|-------|------------------|-------------|-----------------------------------------------|
+| 1     | Tier I Operator  | 2025-03-25  | First log completed and XP awarded            |
 
 ---
 
 ## 🔍 Specializations
 
-| Discipline          | Rank | Progress Notes |
-|---------------------|------|----------------|
-| 💻 IT Support        | A    | Phones, tickets, customer issues |
-| 🔵 Blue Team Ops     | C    | Early detection, routing problems |
-| 🔴 Red Team Tactics  | D    | Malduino & Pico knowledge |
-| ☁️ Cloud Familiarity | D    | Azure interest growing |
-| 🧪 Automation/Scripting | C | Bash/Python usage increasing |
+| Discipline          | Rank | Notes |
+|---------------------|------|------------------------------|
+| 💻 IT Support        | A    | Phone systems, tickets, routers |
+| 🔵 Blue Team Ops     | C    | Troubleshooting, call handling |
+| 🔴 Red Team Tactics  | D    | Malduino, Pico W, recon |
+| ☁️ Cloud Familiarity | D    | Azure ecosystem exploration |
+| 🧪 Automation/Scripting | C | Bash, Python, VIM workflow growing |
 
 ---
 
@@ -60,49 +62,49 @@
 - [ ] Reduce backlog ticket overflow
 - [ ] Automate basic repetitive tasks
 - [ ] Complete 5 flawless support calls
-- [ ] Write internal guide on Gigaset issues
-- [ ] Build mini homelab challenge for skill testing
+- [ ] Write internal Gigaset guide
+- [ ] Build a homelab challenge series
 
 ---
 
-## 🧠 Skill Fragments (Knowledge Acquired)
+## 📚 Knowledge Fragments (Learning Log)
 
-| Date       | Fragment Learned            |
-|------------|-----------------------------|
-| 2025-03-25 | Custom Tags (Ticket system) |
-| [TBD]      |                             |
+| Date       | Fragment                                |
+|------------|------------------------------------------|
+| 2025-03-25 | Custom Tags (ticket system)              |
+| [TBD]      |                                          |
 
 ---
 
 ## 🎒 Gear Loadout
 
-**Current Tools & Tech**
-- 💻 Work Laptop (Ubuntu/Windows)
-- ☎️ Gigaset Phone System
+**Tools & Systems:**
+- 💻 Work Laptop (Ubuntu + Windows)
+- ☎️ Gigaset System
 - 📡 Router Deployment Setup
-- 🐍 Bash/Python Scripting Base
-- 🐤 Malduino W (active)
-- 🐤 Raspberry Pi Pico W (standby)
-- 🔐 VIM (Editor of Choice)
+- 🐍 Bash/Python Scripts
+- 🧙 VIM (Preferred Editor)
+- 🐤 Malduino W (Active Ops)
+- 🐤 Raspberry Pi Pico W (Repurposed)
+- 🔐 Neurovault Repo System
 
-**Planned Upgrades**
-- [ ] Hardened portable hacking lab
-- [ ] Better call scripting toolkit
-- [ ] Discord bot workflow assistant
+**Planned Upgrades:**
+- [ ] Full Discord automation for D&D & logging
+- [ ] Portable hacking lab
+- [ ] Red Team toolkit (on standby)
 
 ---
 
-## 🗂️ Corelogs Archive (Daily Logs)
+## 📂 Logs Archive (Ops + Study)
 
-| Date       | Link/Ref         | XP Gained |
-|------------|------------------|-----------|
-| 2025-03-25 | `Corelog_25-03-2025.md` | +60 XP     |
+| Date       | Type      | Log File                       | XP Gained |
+|------------|-----------|--------------------------------|-----------|
+| 2025-03-25 | Corelog   | `Corelogs/Corelog_25-03-2025.md`   | +60 XP    |
 
 ---
 
 ## 📜 Notes
 
-- Strengths: Hands-on problem solving, tech setup, adapting to ticket pressure
-- Growth Areas: Planning next steps, documenting small wins, proactive learning
-- Long-Term Goal: Purple Team asset with a strong Red/Blue balance
-
+- **Strengths:** Calm under pressure, learning mindset, organized tracking  
+- **Focus Areas:** Automate knowledge, continue Purple Team path, level up script-fu  
+- **Long-Term Goal:** Become a Purple Team Operator and cybersecurity specialist
