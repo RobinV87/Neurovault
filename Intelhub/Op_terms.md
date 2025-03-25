@@ -3,6 +3,7 @@
 ## Authentication & Access
 - **AuthN** -> Authentication
 - **AuthZ** -> Authorization
+- **SSO** -> Single Sign On
 
 ## Cloud Computing
 - **IaaS -> Infrastructure as a Service
