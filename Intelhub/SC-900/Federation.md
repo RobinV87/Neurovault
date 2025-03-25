@@ -1,0 +1,4 @@
+- Federation enables the access of services across orginazational or domain boundaries by establishing trust
+- between the domain's identity provider.
+- With Federation, there is no need for a user to maintain a different username and password when accessing
+- recources in other domains.
