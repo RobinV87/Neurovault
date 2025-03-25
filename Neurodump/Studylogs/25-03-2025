@@ -15,15 +15,15 @@
 | Time         | Activity / Topic              |
 |--------------|-------------------------------|
 | 20:08 - 20:30 | Started SC-900 Describe Identity Concepts |
-| 20:30 - | Deifine Identity as the primary security perimeter |
-| HH:MM - HH:MM | [Break, notes, review]        |
+| 20:30 - 20:45| Deifine Identity as the primary security perimeter |
+| 20:48 -  | Describe the role of the identity provider        |
 
 ---
 
 ## 📚 Knowledge Acquired
 
 - [ ] Learned about AuthN and AuthZ.
-- [ ] [e.g. Understood the difference between SYN and ACK packets]
+- [ ] Learned about Authentication
 - [ ] 
 
 ---
