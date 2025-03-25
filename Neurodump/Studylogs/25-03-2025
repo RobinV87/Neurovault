@@ -6,7 +6,7 @@
 ---
 
 ## 🧠 Focus State
-> [How are you feeling before starting? Energy, distractions, motivation level?]
+> Trying to get focus, but it'll be a good session
 
 ---
 
@@ -14,15 +14,15 @@
 
 | Time         | Activity / Topic              |
 |--------------|-------------------------------|
-| 20:08 - | Started SC-900 Describe Identity Concepts |
-| HH:MM - HH:MM | [e.g. Practiced Bash scripting] |
+| 20:08 - 20:30 | Started SC-900 Describe Identity Concepts |
+| 20:30 - | Deifine Identity as the primary security perimeter |
 | HH:MM - HH:MM | [Break, notes, review]        |
 
 ---
 
 ## 📚 Knowledge Acquired
 
-- [ ] [e.g. Learned how to use `Get-Command` in PowerShell]
+- [ ] Learned about AuthN and AuthZ.
 - [ ] [e.g. Understood the difference between SYN and ACK packets]
 - [ ] 
 
@@ -59,5 +59,5 @@
 ---
 
 ## 🔗 Related Logs
-- [ ] Linked Corelog: `Corelog_YYYY-MM-DD.md`
-- [ ] Resources used: [URLs, books, docs]
+- [ ] Linked Corelog: `Corelog_25-03-2025.md`
+- [ ] Resources used: learn.microsoft.com
