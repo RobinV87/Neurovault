@@ -1,7 +1,3 @@
-# 🧠 Cyber Warrior Character Sheet
-
----
-
 ## 🪪 Identity
 
 **Name:** Ghostroot  
@@ -17,12 +13,12 @@
 
 | Stat                | Value | Notes |
 |---------------------|-------|-------------------------------------------|
-| 🛠️ Tech Skill        | 50    | Troubleshooting, scripting, tools         |
-| 📞 Communication      | 45    | Client handling, updates, translation     |
-| 🧠 Focus             | 38    | +3 from sustained effort during study     |
-| 💡 Knowledge         | 34    | +4 from identity, SSO, federation, AuthN/Z |
-| 🧘 Mental Fortitude  | 30    | Stable, not tested this session           |
-| 🧩 Problem Solving   | 43    | +3 from applied knowledge + check-in      |
+| 🛠️ Tech Skill        | 53    | +3 from device config & TCP/UDP work      |
+| 📞 Communication      | 47    | +2 from direct client praise & callbacks  |
+| 🧠 Focus             | 40    | +2 from pushing through low energy        |
+| 💡 Knowledge         | 34    | No change this session                    |
+| 🧘 Mental Fortitude  | 30    | Stable, no stress fatigue logged          |
+| 🧩 Problem Solving   | 46    | +3 from Excel intel + adaptive tech use   |
 
 **Unspent Stat Points:** 0
 
@@ -30,19 +26,19 @@
 
 ## 📈 XP / Progression
 
-**Current XP:** 110 / 200  
+**Current XP:** 120 / 200  
 **Level:** 2  
-**Progress Bar:** ▓▓░░░░░░░░ (10%)  
+**Progress Bar:** ▓▓░░░░░░░░ (20%)  
 **Next Level Bonus:** +10 Stat Points, Unlock Specialization Branch
 
 ---
 
 ## 🏅 Titles & Milestones
 
-| Level | Title              | Date Earned | Description                                     |
-|-------|--------------------|-------------|-------------------------------------------------|
-| 1     | Tier I Operator    | 2025-03-25  | First corelog tracked and analyzed              |
-| 2     | Knowledge Initiate | 2025-03-25  | Identity mastery session + first successful level-up |
+| Level | Title              | Date Earned | Description                                       |
+|-------|--------------------|-------------|---------------------------------------------------|
+| 1     | Tier I Operator    | 2025-03-25  | First corelog tracked and analyzed                |
+| 2     | Knowledge Initiate | 2025-03-25  | Identity mastery session + first level-up         |
 
 ---
 
@@ -76,6 +72,7 @@
 |------------|--------------------------------------------------------------------------|
 | 2025-03-25 | Custom Tags (ticket system)                                              |
 | 2025-03-25 | AuthN/AuthZ, identity perimeter, directory services, federation, SSO     |
+| 2025-03-26 | ADHD & Learning pattern insight (TED Talk)                               |
 
 ---
 
@@ -104,12 +101,14 @@
 |------------|-----------|------------------------------------|-----------|
 | 2025-03-25 | Corelog   | `Corelogs/Corelog_25-03-2025.md`   | +60 XP    |
 | 2025-03-25 | Studylog  | `Studylogs/Studylog_25-03-2025.md` | +50 XP    |
+| 2025-03-26 | Corelog   | `Corelogs/Corelog_26-03-2025.md`   | +50 XP    |
 
 ---
 
 ## 📜 Notes
 
-- **Strengths:** Calm under pressure, organized, deeply motivated  
-- **Focus Areas:** Identity fundamentals, automation, D&D system integration  
-- **Next Upgrade:** SSO mastery, Azure knowledge, Discord workflow bot  
-- **Long-Term Goal:** Purple Team Operator with mastery in Identity, Automation, and Recon
+- **Strengths:** Resilient under workload, detail-driven, client-focused  
+- **Focus Areas:** Identity infrastructure, workflow scripting, personal growth  
+- **Next Upgrade:** AZ-900 prep, mental energy optimization, Discord bot design  
+- **Long-Term Goal:** Become a Purple Team Operator with deep Identity, Automation, and Recon mastery
+"""
