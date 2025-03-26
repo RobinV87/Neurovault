@@ -26,9 +26,9 @@
 
 ## 📈 XP / Progression
 
-**Current XP:** 120 / 200  
+**Current XP:** 160 / 200  
 **Level:** 2  
-**Progress Bar:** ▓▓░░░░░░░░ (20%)  
+**Progress Bar:** ▓▓▓▓▓░░░ (60%)  
 **Next Level Bonus:** +10 Stat Points, Unlock Specialization Branch
 
 ---
