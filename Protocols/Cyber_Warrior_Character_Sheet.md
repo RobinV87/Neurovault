@@ -13,12 +13,12 @@
 
 | Stat                | Value | Notes |
 |---------------------|-------|-------------------------------------------|
-| 🛠️ Tech Skill        | 53    | +3 from device config & TCP/UDP work      |
+| 🛠️ Tech Skill        | 55    | +3 from device config & TCP/UDP work +2 from indentifying open server risk      |
 | 📞 Communication      | 47    | +2 from direct client praise & callbacks  |
 | 🧠 Focus             | 40    | +2 from pushing through low energy        |
 | 💡 Knowledge         | 34    | No change this session                    |
 | 🧘 Mental Fortitude  | 30    | Stable, no stress fatigue logged          |
-| 🧩 Problem Solving   | 46    | +3 from Excel intel + adaptive tech use   |
+| 🧩 Problem Solving   | 48    | +3 from Excel intel, +2 from security finding   |
 
 **Unspent Stat Points:** 0
 
@@ -26,9 +26,9 @@
 
 ## 📈 XP / Progression
 
-**Current XP:** 160 / 200  
+**Current XP:** 165 / 200  
 **Level:** 2  
-**Progress Bar:** ▓▓▓▓▓░░░ (60%)  
+**Progress Bar:** ▓▓▓▓▓░░░ (65%)  
 **Next Level Bonus:** +10 Stat Points, Unlock Specialization Branch
 
 ---
@@ -73,6 +73,7 @@
 | 2025-03-25 | Custom Tags (ticket system)                                              |
 | 2025-03-25 | AuthN/AuthZ, identity perimeter, directory services, federation, SSO     |
 | 2025-03-26 | ADHD & Learning pattern insight (TED Talk)                               |
+| 2025-03-26 | Investigated exposed server (404) - security risk awareness              |
 
 ---
 
@@ -101,7 +102,7 @@
 |------------|-----------|------------------------------------|-----------|
 | 2025-03-25 | Corelog   | `Corelogs/Corelog_25-03-2025.md`   | +60 XP    |
 | 2025-03-25 | Studylog  | `Studylogs/Studylog_25-03-2025.md` | +50 XP    |
-| 2025-03-26 | Corelog   | `Corelogs/Corelog_26-03-2025.md`   | +50 XP    |
+| 2025-03-26 | Corelog   | `Corelogs/Corelog_26-03-2025.md`   | +55 XP    |
 
 ---
 
