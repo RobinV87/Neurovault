@@ -14,12 +14,12 @@
 
 | Stat               | Value | Notes                                                    |
 |--------------------|-------|----------------------------------------------------------|
-| 🛠️ Tech Skill       | 56    | +3 from device config & TCP/UDP work, +2 from server risk |
-| 📞 Communication    | 50    | +2 from direct client praise & callbacks                |
-| 🧠 Focus            | 42    | +2 from pushing through low energy                      |
-| 💡 Knowledge        | 40    | No change this session                                  |
-| 🧘 Mental Fortitude | 30    | Stable, no stress fatigue logged                        |
-| 🧩 Problem Solving  | 51    | +3 from hands-on practice and security findings         |
+| 🛠️ Tech Skill       | 58    | +2 Maintained Composure despite nerves |
+| 📞 Communication    | 53    | +3 Gained understanding of certification workflow                |
+| 🧠 Focus            | 42    | No change this session                      |
+| 💡 Knowledge        | 41    | No change this session                                  |
+| 🧘 Mental Fortitude | 32    | +2 Overcame stress, traveled, and succeeded                        |
+| 🧩 Problem Solving  | 53    | +2Ticket support for colleague post-exam         |
 
 **Unspent Stat Points:** 0
 
@@ -27,10 +27,11 @@
 
 ## 📈 XP / Progression
 
-- **Current XP:** 200 / 400 
+- **Current XP:** 235 / 400 
 - **Level:** 3  
 - **Progress Bar:** :::::::::: (100%)  
-- **Next Level Bonus:** +10 Stat Points, Unlock Specialization Branch  
+- **Next Level Bonus:** +10 Stat Points, Unlock Specialization Branch
+- **To Spend on Skill Tree Unlocks:** 35  
 
 ### 🎯 Today’s XP Gain
 - +10 XP — Completed Study Session  
@@ -46,6 +47,7 @@
 | 1     | Tier I Operator     | 2025-03-25   | First corelog tracked and analyzed    |
 | 2     | Knowledge Initiate  | 2025-03-25   | Identity mastery session + level-up   |
 | 3     | Knowledge Master    | 2025-03-27   | Achieved Level 3, +10 Stat Points and unlocked Specialization Branch |
+| 4     | Azure Pathfinder    | 2025-03-28   | Gained the AZ-900 Cert |
 
 ---
 
@@ -66,13 +68,11 @@
 
 ## 🎯 Personal Quests
 
-- [x] Reduce backlog ticket overflow  
 - [ ] Automate basic repetitive tasks  
 - [ ] Complete 5 flawless support calls  
 - [ ] Write internal Gigaset guide  
-- [ ] Build a homelab challenge series  
-- [x] Complete SC-900 module path  
-- [x] Pass AZ-900 practice exam again  
+- [ ] Build a homelab challenge series
+- [ ] Learning SC-900  
 
 ---
 
@@ -86,5 +86,6 @@
 | 2025-03-26 | Investigated exposed server (security risk)   |
 | 2025-03-27 | Teams call log troubleshooting                |
 | 2025-03-27 | Azure SLAs and Availability Zones             |
+| 2025-30-28 | MS Certification Exam Workflow                |
 
 ---
