@@ -1,191 +1,205 @@
-/* === Base Styling === */
+/* ========== Base Cyberpunk Theme ========== */
 body {
-  margin: 0;
+  background-color: #0d0d0d;
   font-family: 'Orbitron', sans-serif;
-  background-color: #0b0b0c;
-  color: #f0f0f0;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
+/* Headings */
 h1, h2, h3, h4 {
-  color: #ff6f00;
-  text-shadow: 0 0 2px #ff9900;
+  font-weight: 700;
+  color: #f97316;
+  letter-spacing: 1px;
 }
 
-a {
-  color: #00ffff;
-  text-decoration: none;
+h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid #f97316;
+  margin-bottom: 0.5em;
 }
 
-a:hover {
-  text-decoration: underline;
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5em;
 }
 
-/* === Navigation Tabs === */
-.tab-container {
-  display: flex;
-  justify-content: center;
-  background-color: #111;
-  border-bottom: 2px solid #ff6f00;
+h3 {
+  font-size: 1.2rem;
+  color: #ff6ec7;
 }
 
-.tab {
-  padding: 12px 20px;
-  cursor: pointer;
-  background-color: #222;
-  border: none;
+h4 {
+  font-size: 1rem;
+  color: #00ffee;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #222;
+}
+
+th {
+  background-color: #181818;
+  color: #facc15;
+}
+
+td {
   color: #ccc;
-  transition: all 0.2s ease-in-out;
 }
 
-.tab:hover,
-.tab.active {
-  background-color: #ff6f00;
+/* XP Progress Bar */
+.xp-bar-container {
+  background: #333;
+  border: 1px solid #666;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.xp-bar-fill {
+  background: linear-gradient(90deg, #facc15, #f97316);
   color: #000;
+  padding: 4px 0;
+  text-align: center;
   font-weight: bold;
 }
 
-/* === Tab Content === */
+/* Identity and Stats Section */
+.identity-section,
+.stats-section {
+  padding: 1rem;
+  border: 1px solid #f97316;
+  border-radius: 12px;
+  margin: 1rem 0;
+  background-color: #141414;
+  box-shadow: 0 0 12px #f9731680;
+}
+
+/* Section Blocks */
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #f97316;
+}
+
+.section-sub {
+  color: #94a3b8;
+  margin-bottom: 0.3rem;
+}
+
+/* Identity List */
+#identity-data li {
+  margin-bottom: 0.2rem;
+  color: #fff;
+}
+
+/* XP & Level Display */
+#level-status {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #facc15;
+}
+
+#level-xp {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #facc15;
+}
+
+/* Titles & Specializations */
+#milestone-list li,
+#specialization-table td {
+  color: #a3e635;
+}
+
+#focus-specialization {
+  font-weight: bold;
+  color: #0ea5e9;
+}
+
+/* ✅ Skill Cards */
+.skill-node {
+  border-radius: 10px;
+  border: 2px solid #444;
+  background: #1a1a1a;
+  padding: 1rem;
+  margin: 1rem;
+  transition: all 0.3s ease;
+  color: #eee;
+}
+
+.skill-node.red {
+  border-color: #f43f5e;
+}
+.skill-node.blue {
+  border-color: #3b82f6;
+}
+.skill-node.purple {
+  border-color: #a855f7;
+}
+
+.skill-node.unlocked {
+  border-color: #16a34a;
+  background-color: #052e16;
+  box-shadow: 0 0 15px #22c55e70;
+}
+
+/* Tabs */
+.tab {
+  background-color: #111;
+  color: #fff;
+  padding: 0.5em 1em;
+  margin: 0 4px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #f97316;
+  color: #000;
+}
+
 .tab-content {
   display: none;
-  padding: 1rem 2rem;
+  margin-top: 1rem;
 }
 
 .tab-content.active {
   display: block;
 }
 
-/* === XP Progress Bar === */
-.xp-bar {
-  width: 100%;
-  height: 20px;
-  background-color: #222;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 0.5rem;
-}
-
-.xp-bar-fill {
-  height: 100%;
-  background: linear-gradient(to right, #ff6f00, #ffd700);
+/* Utility */
+.text-center {
   text-align: center;
-  font-size: 0.85rem;
-  color: #000;
-  font-weight: bold;
-  transition: width 0.4s ease-in-out;
 }
-
-/* === Section Titles === */
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+.flex-row {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-bottom: 2px solid #ff6f00;
-  padding-bottom: 0.3rem;
+  flex-direction: row;
+  gap: 1rem;
 }
-
-/* === Skill Tree Layout === */
-#skill-tree-container {
+.flex-column {
   display: flex;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
 }
 
-.tree-column {
-  flex: 1;
-  min-width: 280px;
-  max-width: 360px;
-  background-color: #111111;
-  padding: 1rem;
-  border-radius: 12px;
-  border: 2px solid #333;
-}
-
-.tree-column h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: white;
-  border-bottom: 2px solid #333;
-  padding-bottom: 0.4rem;
-}
-
-/* === Skill Cards === */
-.skill-card {
-  background-color: #1a1a1a;
-  border-left: 5px solid #555;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-}
-
-.skill-card.unlocked {
-  background-color: #003300;
-  border-left: 5px solid limegreen;
-  color: #b4ffb4;
-  box-shadow: 0 0 15px limegreen;
-}
-
-.skill-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.skill-card p {
-  margin: 0.3rem 0;
-  font-size: 0.95rem;
-}
-
-/* === Badges for Info === */
-.badge {
-  display: inline-block;
-  padding: 2px 6px;
-  margin: 2px 6px 2px 0;
-  font-size: 0.8rem;
-  border-radius: 4px;
-  background-color: #222;
-  border: 1px solid #444;
-  color: #ccc;
-}
-
-.badge.xp {
-  color: #ffa500;
-}
-
-.badge.tier {
-  color: #00d8ff;
-}
-
-.badge.cert {
-  color: #b6a0ff;
-}
-
-/* === Path Dots === */
-.dot {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.red { background-color: #ff3b3b; }
-.blue { background-color: #3399ff; }
-.purple { background-color: #b266ff; }
-
-/* === Responsive Tweak === */
+/* Responsiveness */
 @media screen and (max-width: 768px) {
-  #skill-tree-container {
+  .flex-row {
     flex-direction: column;
-    padding: 1rem;
+  }
+  .skill-node {
+    margin: 0.5rem 0;
   }
 }
