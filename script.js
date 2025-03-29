@@ -77,19 +77,18 @@ async function loadLogs() {
   }
 }
 
-async function loadLogFile() {
-  const url = `https://raw.githubusercontent.com/RobinV87/Neurovault/main/Neurodump/Studylogs/`;
+async function loadLogFile(path) {
+  const url = `https://raw.githubusercontent.com/RobinV87/Neurovault/main/${path}`;
   const content = document.getElementById("studylog-content");
 
   try {
     const res = await fetch(url);
     const text = await res.text();
     content.innerHTML = renderMarkdown(text);
-  } catch {
+  } catch (error) {
     content.innerHTML = "<p>⚠️ Failed to load log file.</p>";
   }
 }
-
 
 function renderMarkdown(md) {
   return md
