@@ -6,7 +6,7 @@
     "tier": 1,
     "xp_cost": 150,
     "requirements": [],
-    "unlocks": ["nmap", "Recon-ng", "Google Dorks"]
+    "unlocks": ["nmap", "Recon-ng", "Google Dorks"],
     "unlocked": true
 
   },
@@ -17,7 +17,7 @@
     "tier": 2,
     "xp_cost": 400,
     "requirements": ["Recon Initiate"],
-    "unlocks": ["Metasploit", "Burp Suite Basics", "Hydra"]
+    "unlocks": ["Metasploit", "Burp Suite Basics", "Hydra"],
     "unlocked": false
 
   },
@@ -28,7 +28,7 @@
     "tier": 3,
     "xp_cost": 1000,
     "requirements": ["Exploit Apprentice"],
-    "unlocks": ["Privilege Escalation", "Pivoting", "Custom Payloads"]
+    "unlocks": ["Privilege Escalation", "Pivoting", "Custom Payloads"],
     "unlocked": false
   },
   {
@@ -39,6 +39,7 @@
     "xp_cost": 150,
     "requirements": [],
     "unlocks": ["Splunk Basics", "Wireshark", "Sysmon"]
+    "Certification": "SC-900 - Security, Compliance & Identity Fundamentals",
     "unlocked": false
   },
   {
@@ -48,7 +49,8 @@
     "tier": 2,
     "xp_cost": 400,
     "requirements": ["SOC Observer"],
-    "unlocks": ["Incident Handling Procedures", "Malware Analysis", "Windows Event Logs"]
+    "unlocks": ["Incident Handling Procedures", "Malware Analysis", "Windows Event Logs"],
+    "Certification": "SC-200 - Security Operation Analyst",
     "unlocked": false
   },
   {
@@ -58,7 +60,8 @@
     "tier": 3,
     "xp_cost": 1000,
     "requirements": ["Incident Responder"],
-    "unlocks": ["Threat Hunting", "SIEM Custom Queries", "Forensics Basics"]
+    "unlocks": ["Threat Hunting", "SIEM Custom Queries", "Forensics Basics"],
+    "Certification": "AZ-500 - Azure Security Engineer Associate",
     "unlocked": false
   },
   {
@@ -68,7 +71,8 @@
     "tier": 1,
     "xp_cost": 200,
     "requirements": ["Recon Initiate", "SOC Observer"],
-    "unlocks": ["Cyber Kill Chain", "MITRE ATT&CK Framework"]
+    "unlocks": ["Cyber Kill Chain", "MITRE ATT&CK Framework"],
+    "Certification": "AZ-900 & SC-900",
     "unlocked": false
   },
   {
@@ -78,7 +82,8 @@
     "tier": 2,
     "xp_cost": 750,
     "requirements": ["Cyber Practitioner"],
-    "unlocks": ["Red & Blue Team Exercises", "Adversary Simulation Basics"]
+    "unlocks": ["Red & Blue Team Exercises", "Adversary Simulation Basics"],
+    "Certification": "SC-200 & AZ-104 (Admin)",
     "unlocked": false
   },
   {
@@ -89,6 +94,7 @@
     "xp_cost": 2000,
     "requirements": ["Cyber Operator"],
     "unlocks": ["Purple Team Leadership", "Full Adversary Emulation", "Security Architecture Design"]
+    "Certification": "SC-100"
     "unlocked": false
   }
 ]
