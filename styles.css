@@ -1,157 +1,191 @@
-/* Cyberpunk Theme for Neurovault Dashboard */
-
+/* === Base Styling === */
 body {
   margin: 0;
-  font-family: 'Orbitron', monospace;
-  background-color: #0d0d0d;
-  color: #f5f5f5;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0b0b0c;
+  color: #f0f0f0;
 }
 
-header {
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(90deg, #ff5f00, #ff9900);
-  color: #0d0d0d;
-  box-shadow: 0 0 20px #ff5f00;
+h1, h2, h3, h4 {
+  color: #ff6f00;
+  text-shadow: 0 0 2px #ff9900;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin: 0;
+a {
+  color: #00ffff;
+  text-decoration: none;
 }
 
-.tabs {
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Navigation Tabs === */
+.tab-container {
   display: flex;
   justify-content: center;
-  background-color: #1a1a1a;
-  border-bottom: 2px solid #ff5f00;
+  background-color: #111;
+  border-bottom: 2px solid #ff6f00;
 }
 
 .tab {
-  flex: 1;
-  padding: 1rem;
+  padding: 12px 20px;
   cursor: pointer;
-  background: none;
+  background-color: #222;
   border: none;
-  font-size: 1rem;
-  color: #ff9900;
-  transition: background 0.3s, color 0.3s;
+  color: #ccc;
+  transition: all 0.2s ease-in-out;
 }
 
-.tab:hover {
-  background-color: #2a2a2a;
-}
-
+.tab:hover,
 .tab.active {
-  background-color: #ff5f00;
-  color: #0d0d0d;
+  background-color: #ff6f00;
+  color: #000;
   font-weight: bold;
-  box-shadow: inset 0 -3px 0 #ffcc00;
 }
 
-main {
-  padding: 2rem;
-}
-
+/* === Tab Content === */
 .tab-content {
   display: none;
-  animation: fadeIn 0.5s ease-in-out;
+  padding: 1rem 2rem;
 }
 
 .tab-content.active {
   display: block;
 }
 
-/* 🎮 XP Progress Bar Style */
-.xp-bar-container {
-  background-color: #333;
-  border: 1px solid #ff9900;
-  border-radius: 8px;
+/* === XP Progress Bar === */
+.xp-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #222;
+  border-radius: 10px;
   overflow: hidden;
-  height: 30px;
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 
 .xp-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #ff5f00, #ffcc00);
-  width: 0%;
-  color: #0d0d0d;
+  background: linear-gradient(to right, #ff6f00, #ffd700);
   text-align: center;
-  line-height: 30px;
+  font-size: 0.85rem;
+  color: #000;
   font-weight: bold;
-  transition: width 1s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 
-.card {
-  background-color: #1e1e1e;
-  border: 1px solid #ff5f00;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 10px #ff5f00;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.codex-button {
-  display: inline-block;
-  background: #111;
-  border: 1px solid orange;
-  color: #fff;
-  padding: 8px 12px;
-  text-decoration: none;
-  margin-top: 10px;
-  font-family: inherit;
-  border-radius: 6px;
-}
-.codex-button:hover {
-  background: #222;
-}
-
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.skill-node {
-  background: #111;
-  border: 2px solid #444;
-  padding: 1rem;
-  border-radius: 10px;
-  color: white;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
-  transition: transform 0.2s ease;
-}
-.skill-node:hover {
-  transform: scale(1.05);
-}
-
-.skill-node.red {
-  border-color: crimson;
-}
-.skill-node.blue {
-  border-color: dodgerblue;
-}
-.skill-node.purple {
-  border-color: violet;
-}
-.skill-row {
+/* === Section Titles === */
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid #ff6f00;
+  padding-bottom: 0.3rem;
+}
+
+/* === Skill Tree Layout === */
+#skill-tree-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.tree-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 360px;
+  background-color: #111111;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #333;
+}
+
+.tree-column h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: white;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.4rem;
+}
+
+/* === Skill Cards === */
+.skill-card {
+  background-color: #1a1a1a;
+  border-left: 5px solid #555;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
 }
 
 .skill-card.unlocked {
-  border: 2px solid limegreen;
   background-color: #003300;
-  color: white;
+  border-left: 5px solid limegreen;
+  color: #b4ffb4;
+  box-shadow: 0 0 15px limegreen;
 }
 
+.skill-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
 
+.skill-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+/* === Badges for Info === */
+.badge {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 2px 6px 2px 0;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  background-color: #222;
+  border: 1px solid #444;
+  color: #ccc;
+}
+
+.badge.xp {
+  color: #ffa500;
+}
+
+.badge.tier {
+  color: #00d8ff;
+}
+
+.badge.cert {
+  color: #b6a0ff;
+}
+
+/* === Path Dots === */
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.red { background-color: #ff3b3b; }
+.blue { background-color: #3399ff; }
+.purple { background-color: #b266ff; }
+
+/* === Responsive Tweak === */
+@media screen and (max-width: 768px) {
+  #skill-tree-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
