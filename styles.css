@@ -141,8 +141,16 @@ main {
 .skill-node.purple {
   border-color: violet;
 }
-.skill-card.unlocked {
-  background-color: #0f0a;
-  border: 2px solid lime;
-  box-shadow: 0 0 12px lime;
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
+
+.skill-card.unlocked {
+  border-color: lime;
+  background-color: rgba(0, 255, 0, 0.07);
+  box-shadow: 0 0 8px lime;
+}
+
