@@ -60,6 +60,28 @@ async function loadSpecializations() {
   document.getElementById("focus-specialization").textContent = data.focus;
 }
 
+async function loadSkillTree() {
+  const url = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/NodeTree.json";
+  const container = document.getElementById("skill-tree-container");
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    container.innerHTML = data.map(node => `
+      <div class="skill-node ${node.type}">
+        <h4>${node.label}</h4>
+        <p><strong>XP:</strong> ${node.xp_cost}</p>
+        <p><strong>Tier:</strong> ${node.tier}</p>
+        <p><strong>Unlocks:</strong> ${node.unlocks.join(', ')}</p>
+      </div>
+    `).join("");
+  } catch {
+    container.innerHTML = "<p>⚠️ Failed to load skill tree.</p>";
+  }
+}
+
+
 async function loadLogs() {
   const indexURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Neurodump/Corelogs/log_index.json";
   const container = document.getElementById("studylog-list");
@@ -110,3 +132,12 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSpecializations();
   loadLogs();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadCoreStatsFromJSON();
+  loadSpecializations();
+  loadLogs();       // if still in use
+  loadOpsLogList(); // if still in use
+  loadSkillTree();  // ✅ new
+});
+
