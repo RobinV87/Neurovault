@@ -12,7 +12,7 @@
       "Google Dorks"
     ],
     "certification": "",
-    "unlocked": true
+    "unlocked": false
   },
   {
     "id": "red_t2",
@@ -61,7 +61,7 @@
       "Sysmon"
     ],
     "certification": "SC-900",
-    "unlocked": true
+    "unlocked": false
   },
   {
     "id": "blue_t2",
@@ -112,7 +112,7 @@
       "MITRE ATT&CK Framework"
     ],
     "certification": "SC-900",
-    "unlocked": true
+    "unlocked": false
   },
   {
     "id": "purple_t2",
