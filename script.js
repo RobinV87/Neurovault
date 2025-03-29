@@ -60,8 +60,40 @@ async function loadSpecializations() {
   document.getElementById("focus-specialization").textContent = data.focus;
 }
 
+async function loadLogs() {
+  // You can replace these URLs with the latest real files
+  const studylogURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/studylog_template.md";
+  const opsfileURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/opsfiles-template.md";
+
+  const [studylogRes, opsfileRes] = await Promise.all([
+    fetch(studylogURL),
+    fetch(opsfileURL)
+  ]);
+
+  const studylogText = await studylogRes.text();
+  const opsfileText = await opsfileRes.text();
+
+  document.getElementById("studylog-content").innerHTML = renderMarkdown(studylogText);
+  document.getElementById("opsfile-content").innerHTML = renderMarkdown(opsfileText);
+}
+
+function renderMarkdown(md) {
+  return md
+    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+    .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+    .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+    .replace(/\n$/gim, '<br />')
+    .replace(/\n/gim, '<br />');
+}
+
+
+
 // 🚀 Init All
 document.addEventListener("DOMContentLoaded", () => {
   loadCoreStatsFromJSON();
   loadSpecializations();
+  loadLogs();
 });
