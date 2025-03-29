@@ -20,30 +20,28 @@ function updateXPBar(currentXP, maxXP) {
   bar.textContent = `${currentXP} / ${maxXP} XP`;
 }
 
-// 🧬 Load Identity & Core Stats from Markdown
-async function loadCoreStats() {
-  const url = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Protocols/Cyber_Warrior_Character_Sheet.md";
+// 🚀 Load JSON Stats
+async function loadCoreStatsFromJSON() {
+  const res = await fetch("https://raw.githubusercontent.com/RobinV87/Neurovault/main/corestats.json");
+  const data = await res.json();
 
-  const res = await fetch(url);
-  const text = await res.text();
+  // Identity
+  const identityList = document.getElementById("identity-data");
+  identityList.innerHTML = Object.entries(data.identity)
+    .map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`)
+    .join("");
 
-  // Match based on correct emoji headers
-  const identitySection = text.match(/## 🪪 Identity[\s\S]*?(?=##|$)/);
-  const coreStatsSection = text.match(/## 🧱 Core Stats[\s\S]*?(?=##|$)/);
+  // Core Stats Table
+  const statsTable = document.querySelector("#corestats-table tbody");
+  statsTable.innerHTML = Object.entries(data.core_stats)
+    .map(([key, value]) => `<tr><td>${key}</td><td>${value}</td></tr>`)
+    .join("");
 
-  const content = `
-    <h3>🪪 Identity</h3>
-    <pre>${identitySection ? identitySection[0].replace('## 🪪 Identity', '').trim() : 'Not found'}</pre>
-
-    <h3>🧱 Core Stats</h3>
-    <pre>${coreStatsSection ? coreStatsSection[0].replace('## 🧱 Core Stats', '').trim() : 'Not found'}</pre>
-  `;
-
-  document.getElementById("identity-corestats").innerHTML = content;
+  // Level & XP
+  document.getElementById("level").textContent = data.level;
+  updateXPBar(data.xp.current, data.xp.next);
 }
 
-// 🔥 Initialize on Load
 document.addEventListener("DOMContentLoaded", () => {
-  updateXPBar(200, 400); // Replace with real values later
-  loadCoreStats();
+  loadCoreStatsFromJSON();
 });
