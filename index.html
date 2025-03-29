@@ -2,80 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neurovault: Ghostroot Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghostroot: Cyber Ops Dashboard</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="dashboard">
-    <header>
-      <h1>💀 GHOSTROOT: CYBER OPS DASHBOARD</h1>
-      <p>"For the Vault. For the Mission. For the Root."</p>
-    </header>
-
-    <nav class="tabs">
+  <header class="header">
+    <h1>☠️ GHOSTROOT: CYBER OPS DASHBOARD</h1>
+    <p class="subheader">"For the Vault. For the Mission. For the Root."</p>
+    <nav class="nav">
       <button class="tab active" data-tab="status">🎮 Status</button>
-      <button class="tab" data-tab="xp">📈 XP</button>
-      <button class="tab" data-tab="skilltree">🧬 Skill Tree</button>
-      <a href="https://github.com/RobinV87/Neurovault/tree/main/Neurodump" target="_blank" class="codex-button">📗 Open Full Codex</a>
+      <button class="tab" data-tab="xp">📊 XP</button>
+      <button class="tab" data-tab="skills">🧬 Skill Tree</button>
+      <a href="https://robinv87.github.io/Neurovault/" class="codex-link">🛠️ Open Full Codex</a>
     </nav>
+  </header>
 
-    <main>
-      <section id="status" class="tab-content active">
-        <h2>🪪 Identity & Core Stats</h2>
-        <div class="card" id="identity-corestats">
-          <h3>🪪 Identity</h3>
-          <ul id="identity-data"></ul>
+  <!-- Status Tab -->
+  <section id="status" class="tab-content active">
+    <h2 class="section-title">🔹 Identity & Core Stats
+    </h2>
 
-          <h3>🧱 Core Stats</h3>
-          <table id="corestats-table">
-            <thead>
-              <tr><th>Stat</th><th>Value</th></tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+    <div class="section-box">
+      <h3>📏 Identity</h3>
+      <ul id="identity-data"></ul>
+    </div>
 
-          <h3>🎮 Level & XP</h3>
-          <p><strong>Level:</strong> <span id="level-status"></span></p>
-          <div class="xp-bar-container">
-            <div class="xp-bar-fill">0 / 0 XP</div>
-          </div>
-        </div>
+    <div class="section-box">
+      <h3>🔨 Core Stats</h3>
+      <table id="corestats-table">
+        <thead><tr><th>Stat</th><th>Value</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
-        <h2>🏅 Titles & Specializations</h2>
-        <div class="card" id="titles-specializations">
-          <h3>🏅 Titles Earned</h3>
-          <ul id="milestone-list"></ul>
+    <div class="section-box">
+      <h3>🎮 Level & XP</h3>
+      <p>Level: <span id="level-status"></span></p>
+      <div class="xp-bar-container">
+        <div class="xp-bar-fill" id="level-xp"></div>
+      </div>
+    </div>
+  </section>
 
-          <h3>🧩 Specializations</h3>
-          <table id="specialization-table">
-            <thead>
-              <tr><th>Discipline</th><th>Rank</th><th>Notes</th></tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+  <!-- XP & Titles -->
+  <section id="xp" class="tab-content">
+    <h2 class="section-title">🌟 Titles & Specializations</h2>
 
-          <h3>🎯 Focus Specialization</h3>
-          <p><strong id="focus-specialization">Loading...</strong></p>
-        </div>
-      </section>
+    <div class="section-box">
+      <h3>🏅 Titles Earned</h3>
+      <ul id="milestone-list"></ul>
+    </div>
 
-      <section id="xp" class="tab-content">
-        <h2>📈 XP & Progress</h2>
-        <div class="card">
-          <p><strong>Level:</strong> <span id="level-xp"></span></p>
-          <div class="xp-bar-container">
-            <div class="xp-bar-fill">0 / 0 XP</div>
-          </div>
-        </div>
-      </section>
+    <div class="section-box">
+      <h3>🌱 Specializations</h3>
+      <table id="specialization-table">
+        <thead><tr><th>Discipline</th><th>Rank</th><th>Notes</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
-      <section id="skilltree" class="tab-content">
-        <h2>🧬 Cyber Skill Tree</h2>
-        <div id="skill-tree-container" class="skill-grid"></div>
-        </section>
+    <div class="section-box">
+      <h3>🌟 Focus Specialization</h3>
+      <p id="focus-specialization">Loading...</p>
+    </div>
+  </section>
 
+  <!-- Skill Tree -->
+  <section id="skills" class="tab-content">
+    <h2 class="section-title">🤣 Cyber Skill Tree</h2>
+    <div id="skill-tree-container" class="skill-tree-layout"></div>
+  </section>
 
   <script src="script.js"></script>
 </body>
