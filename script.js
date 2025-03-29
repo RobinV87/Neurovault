@@ -61,7 +61,7 @@ async function loadSpecializations() {
 }
 
 async function loadLogs() {
-  const studylogURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Neurodump/28-03-2025.md";
+  const studylogURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Neurodump/corelogs/28-03-2025.md";
   const opsfileURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Opsfiles/The_Barn_Incident.md";
 
   const [studylogRes, opsfileRes] = await Promise.all([
