@@ -1,0 +1,24 @@
+{
+  "identity": {
+    "Name": "Ghostroot",
+    "Codename": "ARCANA.NODE",
+    "Role": "Tier I Operator \u2013 Purple Team Track",
+    "Affiliation": "Cloud Een",
+    "Track": "Purple Team (Shadow Red Initiate)",
+    "CampaignStart": "2"
+  },
+  "level": 3,
+  "xp": {
+    "current": 200,
+    "next": 400
+  },
+  "core_stats": {
+    "": 0,
+    " Tech Skill": 56,
+    " Communication": 50,
+    " Focus": 42,
+    " Knowledge": 40,
+    " Mental Fortitude": 30,
+    " Problem Solving": 51
+  }
+}
