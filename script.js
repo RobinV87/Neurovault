@@ -60,47 +60,60 @@ async function loadSpecializations() {
   document.getElementById("focus-specialization").textContent = data.focus;
 }
 
-// 🧬 Load and Render Skill Tree
+// 🌳 Load Cyber Skill Tree from JSON
 async function loadSkillTree() {
   const url = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/NodeTree.json";
   const container = document.getElementById("skill-tree-container");
 
   try {
     const res = await fetch(url);
-    const data = await res.json();
+    const nodes = await res.json();
 
-    const redNodes = data.filter(n => n.type === "red");
-    const blueNodes = data.filter(n => n.type === "blue");
-    const purpleNodes = data.filter(n => n.type === "purple");
+    // Group nodes by path
+    const grouped = {
+      red: [],
+      blue: [],
+      purple: []
+    };
 
+    nodes.forEach(node => {
+      grouped[node.type].push(node);
+    });
+
+    // Create tree structure
     container.innerHTML = `
-      <h3>🔴 Red Team Path</h3>
-      <div class="skill-row">${renderNodes(redNodes)}</div>
-      <h3>🔵 Blue Team Path</h3>
-      <div class="skill-row">${renderNodes(blueNodes)}</div>
-      <h3>🟣 Purple Team Path</h3>
-      <div class="skill-row">${renderNodes(purpleNodes)}</div>
-    `;
-  } catch {
-    container.innerHTML = "<p>⚠️ Failed to load skill tree.</p>";
-  }
-}
-
-function renderNodes(nodes) {
-  return nodes.map(node => {
-    const unlockedClass = node.unlocked ? "unlocked" : "";
-    const cert = node.certification ? `<p><strong>Cert:</strong> ${node.certification}</p>` : "";
-
-    return `
-      <div class="skill-card ${node.type} ${unlockedClass}">
-        <h4>${node.label}</h4>
-        <p><strong>XP:</strong> ${node.xp_cost}</p>
-        <p><strong>Tier:</strong> ${node.tier}</p>
-        ${cert}
-        <p><strong>Unlocks:</strong> ${node.unlocks.join(', ')}</p>
+      <div class="tree-column">
+        <h3><span class="dot red"></span> Red Team Path</h3>
+        <div class="tree-section" id="red-path"></div>
+      </div>
+      <div class="tree-column">
+        <h3><span class="dot blue"></span> Blue Team Path</h3>
+        <div class="tree-section" id="blue-path"></div>
+      </div>
+      <div class="tree-column">
+        <h3><span class="dot purple"></span> Purple Team Path</h3>
+        <div class="tree-section" id="purple-path"></div>
       </div>
     `;
-  }).join("");
+
+    // Render skill cards
+    Object.keys(grouped).forEach(path => {
+      const section = document.getElementById(`${path}-path`);
+      section.innerHTML = grouped[path].map(node => `
+        <div class="skill-card ${node.unlocked ? "unlocked" : ""}">
+          <h4>${node.label}</h4>
+          <p><strong>XP:</strong> ${node.xp_cost}</p>
+          <p><strong>Tier:</strong> ${node.tier}</p>
+          ${node.certification ? `<p><strong>Cert:</strong> ${node.certification}</p>` : ""}
+          <p><strong>Unlocks:</strong> ${node.unlocks.join(', ')}</p>
+        </div>
+      `).join("");
+    });
+
+  } catch (error) {
+    container.innerHTML = "<p>⚠️ Failed to load skill tree.</p>";
+    console.error("Skill tree load error:", error);
+  }
 }
 
 // 🚀 Init All
