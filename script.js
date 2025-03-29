@@ -81,48 +81,18 @@ async function loadSkillTree() {
   }
 }
 
+data.forEach(node => {
+  const card = document.createElement("div");
+  card.classList.add("skill-card");
 
-async function loadLogs() {
-  const indexURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Neurodump/Corelogs/log_index.json";
-  const container = document.getElementById("studylog-list");
-
-  try {
-    const res = await fetch(indexURL);
-    const logs = await res.json();
-
-    container.innerHTML = logs.map(log => `
-      <button class="log-button" onclick="loadLogFile('${log.path}')">${log.title}</button>
-    `).join("");
-
-  } catch (error) {
-    container.innerHTML = "<p>Error loading log index.</p>";
+  // ✅ Check if it's unlocked
+  if (node.unlocked) {
+    card.classList.add("unlocked");
   }
-}
 
-async function loadLogFile(path) {
-  const url = `https://raw.githubusercontent.com/RobinV87/Neurovault/main/${path}`;
-  const content = document.getElementById("studylog-content");
+  // then fill out content, append, etc.
+});
 
-  try {
-    const res = await fetch(url);
-    const text = await res.text();
-    content.innerHTML = renderMarkdown(text);
-  } catch (error) {
-    content.innerHTML = "<p>⚠️ Failed to load log file.</p>";
-  }
-}
-
-function renderMarkdown(md) {
-  return md
-    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-    .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
-    .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/gim, '<em>$1</em>')
-    .replace(/\n$/gim, '<br />')
-    .replace(/\n/gim, '<br />');
-}
 
 
 
@@ -130,7 +100,6 @@ function renderMarkdown(md) {
 document.addEventListener("DOMContentLoaded", () => {
   loadCoreStatsFromJSON();
   loadSpecializations();
-  loadLogs();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
