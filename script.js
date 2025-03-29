@@ -14,6 +14,33 @@ tabs.forEach(tab => {
   });
 });
 
+// Load core stats
+async function loadCoreStats() {
+  const url = "https://raw.githubusercontent.com/<your-username>/<your-repo>/main/Protocols/Cyber_Warrior_Character_Sheet.md";
+
+  const res = await fetch(url);
+  const text = await res.text();
+
+  const identitySection = text.match(/## 🪪 Identity[\\s\\S]*?---/);
+  const coreStatsSection = text.match(/## 🧱 Core Stats[\\s\\S]*?---/);
+
+  const content = `
+    <h3>🪪 Identity</h3>
+    <pre>${identitySection ? identitySection[0].replace('## 🪪 Identity', '').replace('---', '').trim() : 'Not found'}</pre>
+
+    <h3>🧱 Core Stats</h3>
+    <pre>${coreStatsSection ? coreStatsSection[0].replace('## 🧱 Core Stats', '').replace('---', '').trim() : 'Not found'}</pre>
+  `;
+
+  document.getElementById("identity-corestats").innerHTML = content;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateXPBar(200, 400);
+  loadCoreStats(); // 💡 Load the core stats into the dashboard
+});
+
+
 // 🌟 XP Progress Bar Filler (hook for dynamic use)
 function updateXPBar(currentXP, maxXP) {
   const bar = document.querySelector('.xp-bar-fill');
