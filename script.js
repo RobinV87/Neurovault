@@ -59,7 +59,6 @@ async function loadSpecializations() {
 
   document.getElementById("focus-specialization").textContent = data.focus;
 }
-
 async function loadSkillTree() {
   const url = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/NodeTree.json";
   const container = document.getElementById("skill-tree-container");
@@ -68,18 +67,40 @@ async function loadSkillTree() {
     const res = await fetch(url);
     const data = await res.json();
 
-    container.innerHTML = data.map(node => `
-      <div class="skill-node ${node.type}">
-        <h4>${node.label}</h4>
-        <p><strong>XP:</strong> ${node.xp_cost}</p>
-        <p><strong>Tier:</strong> ${node.tier}</p>
-        <p><strong>Unlocks:</strong> ${node.unlocks.join(', ')}</p>
-      </div>
-    `).join("");
+    const redNodes = data.filter(n => n.type === "red");
+    const blueNodes = data.filter(n => n.type === "blue");
+    const purpleNodes = data.filter(n => n.type === "purple");
+
+    container.innerHTML = `
+      <h3>🔴 Red Team Path</h3>
+      <div class="skill-row">${renderNodes(redNodes)}</div>
+      <h3>🔵 Blue Team Path</h3>
+      <div class="skill-row">${renderNodes(blueNodes)}</div>
+      <h3>🟣 Purple Team Path</h3>
+      <div class="skill-row">${renderNodes(purpleNodes)}</div>
+    `;
   } catch {
     container.innerHTML = "<p>⚠️ Failed to load skill tree.</p>";
   }
 }
+
+function renderNodes(nodes) {
+  return nodes.map(node => {
+    const unlockedClass = node.unlocked ? "unlocked" : "";
+    const cert = node.certification ? `<p><strong>Cert:</strong> ${node.certification}</p>` : "";
+
+    return `
+      <div class="skill-card ${node.type} ${unlockedClass}">
+        <h4>${node.label}</h4>
+        <p><strong>XP:</strong> ${node.xp_cost}</p>
+        <p><strong>Tier:</strong> ${node.tier}</p>
+        ${cert}
+        <p><strong>Unlocks:</strong> ${node.unlocks.join(', ')}</p>
+      </div>
+    `;
+  }).join("");
+}
+
 
 data.forEach(node => {
   const card = document.createElement("div");
