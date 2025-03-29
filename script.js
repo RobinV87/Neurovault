@@ -100,11 +100,6 @@ data.forEach(node => {
 document.addEventListener("DOMContentLoaded", () => {
   loadCoreStatsFromJSON();
   loadSpecializations();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  loadCoreStatsFromJSON();
-  loadSpecializations();
   loadSkillTree();
 });
 
