@@ -1,0 +1,29 @@
+[
+  {
+    "id": "red_1",
+    "label": "Linux Basics",
+    "type": "red",
+    "unlocked": true,
+    "cost": 20,
+    "description": "Basic command line, file systems, permissions",
+    "children": ["red_2"]
+  },
+  {
+    "id": "red_2",
+    "label": "Privilege Escalation",
+    "type": "red",
+    "unlocked": false,
+    "cost": 30,
+    "description": "Enumerate, SUID, Capabilities, Exploits",
+    "children": []
+  },
+  {
+    "id": "blue_1",
+    "label": "Log Analysis",
+    "type": "blue",
+    "unlocked": true,
+    "cost": 25,
+    "description": "SIEM tools, auditd, Sysmon, event tracing",
+    "children": []
+  }
+]
