@@ -16,7 +16,7 @@ tabs.forEach(tab => {
 
 // Load core stats
 async function loadCoreStats() {
-  const url = "https://raw.githubusercontent.com/<your-username>/<your-repo>/main/Protocols/Cyber_Warrior_Character_Sheet.md";
+  const url = "https://raw.githubusercontent.com/RobinV87/Neurovault/Protocols/Cyber_Warrior_Character_Sheet.md";
 
   const res = await fetch(url);
   const text = await res.text();
