@@ -149,8 +149,9 @@ main {
 }
 
 .skill-card.unlocked {
-  border-color: lime;
-  background-color: rgba(0, 255, 0, 0.07);
-  box-shadow: 0 0 8px lime;
+  border: 2px solid limegreen;
+  background-color: #003300;
+  color: white;
 }
+
 
