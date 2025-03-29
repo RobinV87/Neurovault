@@ -1,78 +1,72 @@
-# Microsoft Entra ID
-- Formally know as Azure Active Directory
-- Cloud based Identity and Access Management Service
-- Used to enable employees, guests and others to sign in and access resources:
-  - Internal resources
-    - Apps on the corperate network and intranet
-    - Cloud apps developed by your own organisation
-  - External services
-    - Microsoft Office 365
-    - Azure Portal
-    - Any SaaS applications
+# 🧠 Knowledge Fragment – Microsoft Entra ID
 
-- It simplifies the way organisations manage authorization and access
-- By providing a single Identity System for their cloud and on-premises applications
-- Microsoft Entra ID can be synced with your existing on-premises:
-  - Existing On-Premises Active Directory
-  - Synced with other directory services
-  - Stand-alone
- 
-- Microsoft Entra ID also allows organizations to securely enables the use of personal devices.
-  - Mobiles
-  - Tablets
-- And enables collaboration with business partners and customers.
+## 🔹 Overview
+
+**Microsoft Entra ID** (formerly **Azure Active Directory**) is a **cloud-based Identity and Access Management (IAM)** service that:
+
+- Enables secure sign-in for employees, guests, and external partners.
+- Provides access to:
+  - 🔒 **Internal resources** (apps on the corporate network/intranet, internal cloud apps)
+  - 🌐 **External services** (Microsoft 365, Azure Portal, 3rd-party SaaS)
+
+### ✳️ Purpose
+
+> Simplifies authorization & access across hybrid environments by providing a **unified identity system** for both **cloud and on-prem apps**.
 
 ---
 
-# Identity Secure Score
-- It's a percentage that functions as an indicator for how aligned you are with Microsoft Best practice recommendations for security.
-- It helps:
-  - Messure your identity secure posture
-  - plan identity security improvements
-  - review the success of your improvements
+## 🔑 Identity Management Features
+
+### 🏢 Integration Options
+- **Sync with on-prem AD**
+- **Standalone**
+- **Hybrid (AD Connect)**
+
+### 📱 Device Access
+- Supports **secure personal device usage** (e.g., mobile, tablet)
+- Enables **external collaboration** (customers, partners)
 
 ---
 
-# Basic Terminology
+## 🧪 Identity Secure Score
 
-## Tenant
-- A Microsoft Entra Tenant is an instance of Microsoft Entra ID in which information about a single organization resides including organizational objects such as:
-  - Users
-  - Groups
-  - Devices
-  - Application registrations
-- A tenant also contains access and compliance policies and resources, such as:
-  - Applications registered in the Directory
-- Each Microsoft Entra tenant has a unique ID {**tenant ID**} and a domain name (i.e. contoso.onmicrosoft.com) and serves as a security and adminstrative boundary. Allowing the organization to manage and control access toL
-  - Resources
-  - Applications
-  - Devices
-  - Services
-   
----
+A **percentage-based metric** used to measure how well your identity configuration aligns with Microsoft best practices.
 
-## Directory
-
-- The terms Microsoft Entra Directory and Microsoft Entra Tenant are often used interchangeably. The directory is a logical container within a Mircosoft Entra tenant that holds and organizes the various resources and objects related to:
-  - Identity and Access Management including:
-    - Users
-    - Groups
-    - Applications
-    - Devices
-    - Other Directory objects.
-- The Directory is like a database of identities and resources associated with a tenant.
-- A Microsoft Entra Tenant consists only of one directory.
+**Helps you:**
+- Measure identity security posture
+- Plan improvements
+- Review success of changes
 
 ---
 
-## Multi-tenant
+## 📘 Key Terminology
 
-- A multi-tenant organization is an organization that has more than one instance of Microsoft Entra ID. Reasons for this could be that an organization has multiple subsidiaries or business units that work independently, company mergers or multiple geographical boundaries with various residency regulations.
+### 🏢 Tenant
+
+- A **tenant** is an instance of Microsoft Entra ID tied to a single org.
+- Contains:
+  - Users, groups, devices, application registrations
+  - Compliance/access policies
+- Has a unique **Tenant ID** and **domain** (e.g., `contoso.onmicrosoft.com`)
+- Acts as the **admin and security boundary**
+
+### 📂 Directory
+
+- Often used interchangeably with "tenant"
+- Think of it as the **database of identities and resources**
+- Each tenant = **1 directory**
+
+### 🌐 Multi-Tenant
+
+- Organization with **multiple Entra tenants** due to:
+  - Subsidiaries, M&As
+  - Geo-boundary compliance
+- Example: Global orgs using region-based tenants
 
 ---
 
-# Who uses Microsoft Entra ID?
+## 👥 Who Uses It?
 
-- Microsoft Entra ID is used by IT admins to control access to corporate apps and resources, based on business requirements.
-- Developers use Microsoft Entra ID as a standards-based approach for adding SSO to their apps, so that users can sign in with their pre-exisitng credentials. Microsoft Entra ID also provides application programming interfaces (APIs) that allow developers to build personalized app experiences using existing organisational data.
-- Subscribers to Azure Services, Microsoft 365 or Dynamics 365 automatically have access to Microsoft Entra ID.
+- **IT Admins**: Control access based on business rules
+- **Developers**: Add **SSO**, use APIs for personalized app experiences
+- **Azure/M365/D365 users**: Automatically get access to Entra ID
