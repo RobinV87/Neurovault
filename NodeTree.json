@@ -7,6 +7,8 @@
     "xp_cost": 50,
     "requirements": [],
     "unlocks": ["nmap", "Recon-ng", "Google Dorks"]
+    "unlocked": true
+
   },
   {
     "id": "red_t2",
@@ -16,6 +18,8 @@
     "xp_cost": 100,
     "requirements": ["Recon Initiate"],
     "unlocks": ["Metasploit", "Burp Suite Basics", "Hydra"]
+    "unlocked": false
+
   },
   {
     "id": "red_t3",
@@ -25,6 +29,7 @@
     "xp_cost": 200,
     "requirements": ["Exploit Apprentice"],
     "unlocks": ["Privilege Escalation", "Pivoting", "Custom Payloads"]
+    "unlocked": false
   },
   {
     "id": "blue_t1",
@@ -34,6 +39,7 @@
     "xp_cost": 50,
     "requirements": [],
     "unlocks": ["Splunk Basics", "Wireshark", "Sysmon"]
+    "unlocked": false
   },
   {
     "id": "blue_t2",
@@ -43,6 +49,7 @@
     "xp_cost": 100,
     "requirements": ["SOC Observer"],
     "unlocks": ["Incident Handling Procedures", "Malware Analysis", "Windows Event Logs"]
+    "unlocked": false
   },
   {
     "id": "blue_t3",
@@ -52,6 +59,7 @@
     "xp_cost": 200,
     "requirements": ["Incident Responder"],
     "unlocks": ["Threat Hunting", "SIEM Custom Queries", "Forensics Basics"]
+    "unlocked": false
   },
   {
     "id": "purple_t1",
@@ -61,6 +69,7 @@
     "xp_cost": 75,
     "requirements": ["Recon Initiate", "SOC Observer"],
     "unlocks": ["Cyber Kill Chain", "MITRE ATT&CK Framework"]
+    "unlocked": false
   },
   {
     "id": "purple_t2",
@@ -70,6 +79,7 @@
     "xp_cost": 150,
     "requirements": ["Cyber Practitioner"],
     "unlocks": ["Red & Blue Team Exercises", "Adversary Simulation Basics"]
+    "unlocked": false
   },
   {
     "id": "purple_t3",
@@ -79,5 +89,6 @@
     "xp_cost": 300,
     "requirements": ["Cyber Operator"],
     "unlocks": ["Purple Team Leadership", "Full Adversary Emulation", "Security Architecture Design"]
+    "unlocked": false
   }
 ]
