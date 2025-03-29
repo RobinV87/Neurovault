@@ -16,5 +16,18 @@
   - Existing On-Premises Active Directory
   - Synced with other directory services
   - Stand-alone
+ 
+- Microsoft Entra ID also allows organizations to securely enables the use of personal devices.
+  - Mobiles
+  - Tablets
+- And enables collaboration with business partners and customers.
+
 ---
+
+# Identity Secure Score
+- It's a percentage that functions as an indicator for how aligned you are with Microsoft Best practice recommendations for security.
+- It helps:
+  - Messure your identity secure posture
+  - plan identity security improvements
+  - review the success of your improvements
 
