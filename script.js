@@ -61,9 +61,8 @@ async function loadSpecializations() {
 }
 
 async function loadLogs() {
-  // You can replace these URLs with the latest real files
-  const studylogURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/studylog_template.md";
-  const opsfileURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/opsfiles-template.md";
+  const studylogURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Neurodump/28-03-2025.md";
+  const opsfileURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Opsfiles/The_Barn_Incident.md";
 
   const [studylogRes, opsfileRes] = await Promise.all([
     fetch(studylogURL),
