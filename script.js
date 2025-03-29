@@ -77,8 +77,8 @@ async function loadLogs() {
   }
 }
 
-async function loadLogFile(path) {
-  const url = `https://raw.githubusercontent.com/RobinV87/Neurovault/main/${path}`;
+async function loadLogFile() {
+  const url = `https://raw.githubusercontent.com/RobinV87/Neurovault/main/Neurodump/Studylogs/`;
   const content = document.getElementById("studylog-content");
 
   try {
