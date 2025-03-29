@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neurovault: Ghostroot Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>💀 GHOSTROOT: CYBER OPS DASHBOARD</h1>
+      <p>"For the Vault. For the Mission. For the Root."</p>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="status">🎮 Status</button>
+      <button class="tab" data-tab="xp">📈 XP</button>
+      <button class="tab" data-tab="skills">🧩 Skill Tree</button>
+      <button class="tab" data-tab="logs">📚 Logs</button>
+      <button class="tab" data-tab="corelog">🧠 Corelogs</button>
+    </nav>
+
+    <main>
+      <section id="status" class="tab-content active">
+        <h2>🪪 Identity & Core Stats</h2>
+        <!-- Identity block -->
+        <div class="card">[Insert identity + core stat table here]</div>
+
+        <h2>🏅 Titles & Specializations</h2>
+        <div class="card">[Insert milestone + specialization info here]</div>
+      </section>
+
+      <section id="xp" class="tab-content">
+        <h2>📈 XP / Leveling</h2>
+        <div class="card">[Insert XP bar, level, and daily XP gains]</div>
+	<h2>📈 XP Progress</h2>
+	<div class="card">
+  	<p><strong>Level:</strong> 3</p>
+  	<div class="xp-bar-container">
+    		<div class="xp-bar-fill">0 / 400 XP</div>
+  	</div>
+	</div>
+	
+
+      </section>
+	
+      <section id="skills" class="tab-content">
+        <h2>🧬 NodeTree Unlocks</h2>
+        <div class="card">[Visual Tree of Red / Blue / Purple paths]</div>
+      </section>
+
+      <section id="logs" class="tab-content">
+        <h2>📘 Studylogs & Opsfiles</h2>
+        <div class="card">[Insert parsed logs or linked summaries]</div>
+      </section>
+
+      <section id="corelog" class="tab-content">
+        <h2>🧠 Corelogs</h2>
+        <div class="card">[List of recent corelog entries with links]</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
