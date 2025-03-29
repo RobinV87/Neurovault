@@ -4,7 +4,7 @@
 - **Name:** Ghostroot  
 - **Codename:** ARCANA.NODE  
 - **Role:** Tier I Operator – Purple Team Track  
-- **Affiliation:** Cloud Een  
+- **Affiliation:** Command Node Alpha 
 - **Track:** Purple Team (Shadow Red Initiate)  
 - **Campaign Start Date:** 25-03-2025  
 
