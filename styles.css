@@ -141,6 +141,8 @@ main {
 .skill-node.purple {
   border-color: violet;
 }
-
-
-
+.skill-card.unlocked {
+  background-color: #0f0a;
+  border: 2px solid lime;
+  box-shadow: 0 0 12px lime;
+}
