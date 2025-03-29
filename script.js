@@ -14,13 +14,15 @@ tabs.forEach(tab => {
 
 // 🌟 XP Progress Bar Filler
 function updateXPBar(currentXP, maxXP) {
-  const bar = document.querySelector('.xp-bar-fill');
+  const bar = document.querySelectorAll('.xp-bar-fill');
   const percent = Math.min((currentXP / maxXP) * 100, 100);
-  bar.style.width = percent + '%';
-  bar.textContent = `${currentXP} / ${maxXP} XP`;
+  bar.forEach(b => {
+    b.style.width = percent + '%';
+    b.textContent = `${currentXP} / ${maxXP} XP`;
+  });
 }
 
-// 🚀 Load JSON Stats
+// 🧠 Load Core Stats + Identity
 async function loadCoreStatsFromJSON() {
   const res = await fetch("https://raw.githubusercontent.com/RobinV87/Neurovault/main/corestats.json");
   const data = await res.json();
@@ -39,9 +41,30 @@ async function loadCoreStatsFromJSON() {
 
   // Level & XP
   document.getElementById("level").textContent = data.level;
+  document.getElementById("level-xp").textContent = data.level;
   updateXPBar(data.xp.current, data.xp.next);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadCoreStatsFromJSON();
-});
+// 🏅 Load Milestones + Specializations
+async function loadSpecializations() {
+  const res = await fetch("https://raw.githubusercontent.com/RobinV87/Neurovault/main/specializations.json");
+  const data = await res.json();
+
+  // Milestone List
+  const milestoneList = document.getElementById("milestone-list");
+  milestoneList.innerHTML = data.milestones
+    .map(m => `<li><strong>Level ${m.Level}:</strong> ${m.Title} <em>(${m.Date})</em></li>`)
+    .join("");
+
+  // Specializations Table
+  const specTable = document.querySelector("#specialization-table tbody");
+  specTable.innerHTML = data.specializations
+    .map(s => `<tr><td>${s.Discipline}</td><td>${s.Rank}</td><td>${s.Notes}</td></tr>`)
+    .join("");
+
+  // Focus
+  document.getElementById("focus-specialization").textContent = data.focus;
+}
+
+// 🚀 Init All
+document.addEvent
