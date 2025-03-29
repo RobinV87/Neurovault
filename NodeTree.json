@@ -1,29 +1,83 @@
 [
   {
-    "id": "red_1",
-    "label": "Linux Basics",
+    "id": "red_t1",
+    "label": "Recon Initiate",
     "type": "red",
-    "unlocked": true,
-    "cost": 20,
-    "description": "Basic command line, file systems, permissions",
-    "children": ["red_2"]
+    "tier": 1,
+    "xp_cost": 50,
+    "requirements": [],
+    "unlocks": ["nmap", "Recon-ng", "Google Dorks"]
   },
   {
-    "id": "red_2",
-    "label": "Privilege Escalation",
+    "id": "red_t2",
+    "label": "Exploit Apprentice",
     "type": "red",
-    "unlocked": false,
-    "cost": 30,
-    "description": "Enumerate, SUID, Capabilities, Exploits",
-    "children": []
+    "tier": 2,
+    "xp_cost": 100,
+    "requirements": ["Recon Initiate"],
+    "unlocks": ["Metasploit", "Burp Suite Basics", "Hydra"]
   },
   {
-    "id": "blue_1",
-    "label": "Log Analysis",
+    "id": "red_t3",
+    "label": "Penetration Tester",
+    "type": "red",
+    "tier": 3,
+    "xp_cost": 200,
+    "requirements": ["Exploit Apprentice"],
+    "unlocks": ["Privilege Escalation", "Pivoting", "Custom Payloads"]
+  },
+  {
+    "id": "blue_t1",
+    "label": "SOC Observer",
     "type": "blue",
-    "unlocked": true,
-    "cost": 25,
-    "description": "SIEM tools, auditd, Sysmon, event tracing",
-    "children": []
+    "tier": 1,
+    "xp_cost": 50,
+    "requirements": [],
+    "unlocks": ["Splunk Basics", "Wireshark", "Sysmon"]
+  },
+  {
+    "id": "blue_t2",
+    "label": "Incident Responder",
+    "type": "blue",
+    "tier": 2,
+    "xp_cost": 100,
+    "requirements": ["SOC Observer"],
+    "unlocks": ["Incident Handling Procedures", "Malware Analysis", "Windows Event Logs"]
+  },
+  {
+    "id": "blue_t3",
+    "label": "Security Analyst",
+    "type": "blue",
+    "tier": 3,
+    "xp_cost": 200,
+    "requirements": ["Incident Responder"],
+    "unlocks": ["Threat Hunting", "SIEM Custom Queries", "Forensics Basics"]
+  },
+  {
+    "id": "purple_t1",
+    "label": "Cyber Practitioner",
+    "type": "purple",
+    "tier": 1,
+    "xp_cost": 75,
+    "requirements": ["Recon Initiate", "SOC Observer"],
+    "unlocks": ["Cyber Kill Chain", "MITRE ATT&CK Framework"]
+  },
+  {
+    "id": "purple_t2",
+    "label": "Cyber Operator",
+    "type": "purple",
+    "tier": 2,
+    "xp_cost": 150,
+    "requirements": ["Cyber Practitioner"],
+    "unlocks": ["Red & Blue Team Exercises", "Adversary Simulation Basics"]
+  },
+  {
+    "id": "purple_t3",
+    "label": "Cyber Architect",
+    "type": "purple",
+    "tier": 3,
+    "xp_cost": 300,
+    "requirements": ["Cyber Operator"],
+    "unlocks": ["Purple Team Leadership", "Full Adversary Emulation", "Security Architecture Design"]
   }
 ]
