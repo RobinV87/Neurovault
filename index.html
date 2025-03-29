@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neurovault: Ghostroot Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
@@ -18,79 +18,73 @@
       <button class="tab active" data-tab="status">🎮 Status</button>
       <button class="tab" data-tab="xp">📈 XP</button>
       <button class="tab" data-tab="skills">🧩 Skill Tree</button>
-      <button class="tab" data-tab="logs">📚 Logs</button>
+      <button class="tab" data-tab="logs">📘 Logs</button>
       <button class="tab" data-tab="corelog">🧠 Corelogs</button>
     </nav>
 
     <main>
       <section id="status" class="tab-content active">
         <h2>🪪 Identity & Core Stats</h2>
-        <!-- Identity block -->
         <div class="card" id="identity-corestats">
-  	<h3>🪪 Identity</h3>
-  	<ul id="identity-data"></ul>
+          <h3>🪪 Identity</h3>
+          <ul id="identity-data"></ul>
 
-  	<h3>🧱 Core Stats</h3>
-  	<table id="corestats-table">
-    		<thead>
-      		<tr><th>Stat</th><th>Value</th></tr>
-    	</thead>
-    	<tbody></tbody>
-  	</table>
+          <h3>🧱 Core Stats</h3>
+          <table id="corestats-table">
+            <thead>
+              <tr><th>Stat</th><th>Value</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
 
-  	<h3>🎮 Level & XP</h3>
-  	<p><strong>Level:</strong> <span id="level"></span></p>
-  	<div class="xp-bar-container">
-    		<div class="xp-bar-fill">0 / 0 XP</div>
- 	 </div>
-	</div>
+          <h3>🎮 Level & XP</h3>
+          <p><strong>Level:</strong> <span id="level"></span></p>
+          <div class="xp-bar-container">
+            <div class="xp-bar-fill">0 / 0 XP</div>
+          </div>
+        </div>
 
-
+        <h2>🏅 Titles & Specializations</h2>
         <div class="card" id="titles-specializations">
-  	<h3>🏅 Titles Earned</h3>
-  	<ul id="milestone-list"></ul>
+          <h3>🏅 Titles Earned</h3>
+          <ul id="milestone-list"></ul>
 
-  	<h3>🧩 Specializations</h3>
-  	<table id="specialization-table">
-    	<thead>
-      		<tr><th>Discipline</th><th>Rank</th><th>Notes</th></tr>
-    	</thead>
-    	<tbody></tbody>
- 	 </table>
+          <h3>🧩 Specializations</h3>
+          <table id="specialization-table">
+            <thead>
+              <tr><th>Discipline</th><th>Rank</th><th>Notes</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
 
-  	<h3>🎯 Focus Specialization</h3>
-  	<p><strong id="focus-specialization">Loading...</strong></p>
-	</div>
-
+          <h3>🎯 Focus Specialization</h3>
+          <p><strong id="focus-specialization">Loading...</strong></p>
+        </div>
       </section>
 
       <section id="xp" class="tab-content">
-        <h2>📈 XP / Leveling</h2>
-        <div class="card">[Insert XP bar, level, and daily XP gains]</div>
-	<h2>📈 XP Progress</h2>
-	<div class="card">
-  	<p><strong>Level:</strong> 3</p>
-  	<div class="xp-bar-container">
-    		<div class="xp-bar-fill">0 / 400 XP</div>
-  	</div>
-	</div>
-	
-
+        <h2>📈 XP & Progress</h2>
+        <div class="card">
+          <p><strong>Level:</strong> <span id="level-xp"></span></p>
+          <div class="xp-bar-container">
+            <div class="xp-bar-fill">0 / 0 XP</div>
+          </div>
+        </div>
       </section>
-	
+
       <section id="skills" class="tab-content">
         <h2>🧬 NodeTree Unlocks</h2>
-        <div class="card">[Visual Tree of Red / Blue / Purple paths]</div>
+        <div class="card">[Coming soon: Red, Blue, Purple skill trees]</div>
       </section>
 
       <section id="logs" class="tab-content">
         <h2>📘 Studylogs & Opsfiles</h2>
-        <div class="card">[Insert parsed logs or linked summaries]</div>
+        <div class="card">[Study session summaries and toolkits]</div>
       </section>
 
       <section id="corelog" class="tab-content">
         <h2>🧠 Corelogs</h2>
-        <div class="card">[List of recent corelog entries with links]</div>
+        <div class="card">[Daily mental logs from the Neurodump]</div>
       </section>
     </main>
   </div>
@@ -98,4 +92,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
