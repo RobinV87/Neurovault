@@ -61,20 +61,35 @@ async function loadSpecializations() {
 }
 
 async function loadLogs() {
-  const studylogURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Neurodump/Studylogs/27-03-2025";
-  const opsfileURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Opsfiles/SentinalOps/The_Barn_Incident.md";
+  const indexURL = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/Neurodump/Corelogs/log_index.json";
+  const container = document.getElementById("studylog-list");
 
-  const [studylogRes, opsfileRes] = await Promise.all([
-    fetch(studylogURL),
-    fetch(opsfileURL)
-  ]);
+  try {
+    const res = await fetch(indexURL);
+    const logs = await res.json();
 
-  const studylogText = await studylogRes.text();
-  const opsfileText = await opsfileRes.text();
+    container.innerHTML = logs.map(log => `
+      <button class="log-button" onclick="loadLogFile('${log.path}')">${log.title}</button>
+    `).join("");
 
-  document.getElementById("studylog-content").innerHTML = renderMarkdown(studylogText);
-  document.getElementById("opsfile-content").innerHTML = renderMarkdown(opsfileText);
+  } catch (error) {
+    container.innerHTML = "<p>Error loading log index.</p>";
+  }
 }
+
+async function loadLogFile(path) {
+  const url = `https://raw.githubusercontent.com/RobinV87/Neurovault/main/${path}`;
+  const content = document.getElementById("studylog-content");
+
+  try {
+    const res = await fetch(url);
+    const text = await res.text();
+    content.innerHTML = renderMarkdown(text);
+  } catch {
+    content.innerHTML = "<p>⚠️ Failed to load log file.</p>";
+  }
+}
+
 
 function renderMarkdown(md) {
   return md
