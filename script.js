@@ -136,8 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   loadCoreStatsFromJSON();
   loadSpecializations();
-  loadLogs();       // if still in use
-  loadOpsLogList(); // if still in use
-  loadSkillTree();  // ✅ new
+  loadSkillTree();
 });
 
