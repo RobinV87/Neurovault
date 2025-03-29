@@ -59,6 +59,8 @@ async function loadSpecializations() {
 
   document.getElementById("focus-specialization").textContent = data.focus;
 }
+
+// 🧬 Load and Render Skill Tree
 async function loadSkillTree() {
   const url = "https://raw.githubusercontent.com/RobinV87/Neurovault/main/NodeTree.json";
   const container = document.getElementById("skill-tree-container");
@@ -101,26 +103,9 @@ function renderNodes(nodes) {
   }).join("");
 }
 
-
-data.forEach(node => {
-  const card = document.createElement("div");
-  card.classList.add("skill-card");
-
-  // ✅ Check if it's unlocked
-  if (node.unlocked) {
-    card.classList.add("unlocked");
-  }
-
-  // then fill out content, append, etc.
-});
-
-
-
-
 // 🚀 Init All
 document.addEventListener("DOMContentLoaded", () => {
   loadCoreStatsFromJSON();
   loadSpecializations();
   loadSkillTree();
 });
-
