@@ -4,7 +4,7 @@
     "label": "Recon Initiate",
     "type": "red",
     "tier": 1,
-    "xp_cost": 50,
+    "xp_cost": 150,
     "requirements": [],
     "unlocks": ["nmap", "Recon-ng", "Google Dorks"]
     "unlocked": true
@@ -15,7 +15,7 @@
     "label": "Exploit Apprentice",
     "type": "red",
     "tier": 2,
-    "xp_cost": 100,
+    "xp_cost": 400,
     "requirements": ["Recon Initiate"],
     "unlocks": ["Metasploit", "Burp Suite Basics", "Hydra"]
     "unlocked": false
@@ -26,7 +26,7 @@
     "label": "Penetration Tester",
     "type": "red",
     "tier": 3,
-    "xp_cost": 200,
+    "xp_cost": 1000,
     "requirements": ["Exploit Apprentice"],
     "unlocks": ["Privilege Escalation", "Pivoting", "Custom Payloads"]
     "unlocked": false
@@ -36,7 +36,7 @@
     "label": "SOC Observer",
     "type": "blue",
     "tier": 1,
-    "xp_cost": 50,
+    "xp_cost": 150,
     "requirements": [],
     "unlocks": ["Splunk Basics", "Wireshark", "Sysmon"]
     "unlocked": false
@@ -46,7 +46,7 @@
     "label": "Incident Responder",
     "type": "blue",
     "tier": 2,
-    "xp_cost": 100,
+    "xp_cost": 400,
     "requirements": ["SOC Observer"],
     "unlocks": ["Incident Handling Procedures", "Malware Analysis", "Windows Event Logs"]
     "unlocked": false
@@ -56,7 +56,7 @@
     "label": "Security Analyst",
     "type": "blue",
     "tier": 3,
-    "xp_cost": 200,
+    "xp_cost": 1000,
     "requirements": ["Incident Responder"],
     "unlocks": ["Threat Hunting", "SIEM Custom Queries", "Forensics Basics"]
     "unlocked": false
@@ -66,7 +66,7 @@
     "label": "Cyber Practitioner",
     "type": "purple",
     "tier": 1,
-    "xp_cost": 75,
+    "xp_cost": 200,
     "requirements": ["Recon Initiate", "SOC Observer"],
     "unlocks": ["Cyber Kill Chain", "MITRE ATT&CK Framework"]
     "unlocked": false
@@ -76,7 +76,7 @@
     "label": "Cyber Operator",
     "type": "purple",
     "tier": 2,
-    "xp_cost": 150,
+    "xp_cost": 750,
     "requirements": ["Cyber Practitioner"],
     "unlocks": ["Red & Blue Team Exercises", "Adversary Simulation Basics"]
     "unlocked": false
@@ -86,7 +86,7 @@
     "label": "Cyber Architect",
     "type": "purple",
     "tier": 3,
-    "xp_cost": 300,
+    "xp_cost": 2000,
     "requirements": ["Cyber Operator"],
     "unlocks": ["Purple Team Leadership", "Full Adversary Emulation", "Security Architecture Design"]
     "unlocked": false
