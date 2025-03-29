@@ -1,5 +1,37 @@
 {
-  "milestones": [],
-  "specializations": [],
-  "focus": ""
+  "milestones": [
+    {
+      "Level": "1",
+      "Title": "Tier I Operator",
+      "Date": "2025-03-25"
+    },
+    {
+      "Level": "2",
+      "Title": "Azure Certified",
+      "Date": "2025-03-28"
+    },
+    {
+      "Level": "3",
+      "Title": "Ops Responder (Blue)",
+      "Date": "2025-03-28"
+    }
+  ],
+  "specializations": [
+    {
+      "Discipline": "💻 IT Support",
+      "Rank": "A",
+      "Notes": "Routers, call tracing, escalations"
+    },
+    {
+      "Discipline": "☁️ Cloud Familiarity",
+      "Rank": "B",
+      "Notes": "Azure fundamentals + SLA understanding"
+    },
+    {
+      "Discipline": "🧪 Automation/Scripting",
+      "Rank": "C",
+      "Notes": "Applied Bash/Python in scenario"
+    }
+  ],
+  "focus": "💻 IT Support"
 }
