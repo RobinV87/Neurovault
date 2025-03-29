@@ -24,7 +24,7 @@ function updateXPBar(currentXP, maxXP) {
 
 // 🧠 Load Core Stats + Identity
 async function loadCoreStatsFromJSON() {
-  const res = await fetch("https://raw.githubusercontent.com/RobinV87/Neurovault/corestats.json");
+  const res = await fetch("https://raw.githubusercontent.com/RobinV87/Neurovault/main/corestats.json");
   const data = await res.json();
 
   const identityList = document.getElementById("identity-data");
@@ -44,7 +44,7 @@ async function loadCoreStatsFromJSON() {
 
 // 🏅 Load Milestones + Specializations
 async function loadSpecializations() {
-  const res = await fetch("https://raw.githubusercontent.com/RobinV87/Neurovault/specializations.json");
+  const res = await fetch("https://raw.githubusercontent.com/RobinV87/Neurovault/main/specializations.json");
   const data = await res.json();
 
   const milestoneList = document.getElementById("milestone-list");
