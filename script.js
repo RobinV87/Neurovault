@@ -38,7 +38,7 @@ async function loadCoreStatsFromJSON() {
     .join("");
 
   document.getElementById("level-status").textContent = data.level;
-  document.getElementById("level-xp").textContent = data.level;
+  document.getElementById("level-xp").textContent = `${data.xp.current} / ${data.xp.next} XP`;
   updateXPBar(data.xp.current, data.xp.next);
 }
 
