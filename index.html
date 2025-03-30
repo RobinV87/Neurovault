@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ghostroot: Cyber Ops Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
   <link rel="icon" type="image/png" href="skull-icon.png" />
 </head>
 
@@ -13,7 +13,7 @@
   <header>
     <h1>☠️ GHOSTROOT: CYBER OPS DASHBOARD</h1>
     <p class="tagline">"For the Vault. For the Mission. For the Root."</p>
-    <nav class="tabs">
+    <nav class="tabs responsive-tabs">
       <button class="tab active" data-tab="status">🎮 Status</button>
       <button class="tab" data-tab="xp">📈 Specializations</button>
       <button class="tab" data-tab="skilltree">🧬 Skill Tree</button>
@@ -44,7 +44,7 @@
         <h3>🎮 Level & XP</h3>
         <p>Level: <span id="level-status"></span></p>
         <div class="xp-bar">
-          <div class="xp-bar-fill" id="level-xp">0 / 0 XP</div>
+          <div class="xp-bar-fill">0 / 0 XP</div>
         </div>
       </div>
     </section>
