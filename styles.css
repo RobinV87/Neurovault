@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background: linear-gradient(to right, #ff6a00, #00ff99);
+  background: linear-gradient(to right, #ff6a00, #ff0033);
   padding: 16px;
   text-align: center;
   box-shadow: 0 0 30px #ff6600;
@@ -24,7 +24,7 @@ h1 {
   margin: 0;
   font-size: 36px;
   color: #fff;
-  text-shadow: 0 0 10px #ff6600, 0 0 20px #00ff99;
+  text-shadow: 0 0 10px #ff6600, 0 0 20px #ff0033;
 }
 
 .tagline {
@@ -131,7 +131,7 @@ table th {
 }
 
 .xp-bar-fill {
-  background: linear-gradient(to right, #ffa500, #00ff99);
+  background: linear-gradient(to right, #ff6a00, #ff0033);
   height: 100%;
   width: 0;
   color: black;
