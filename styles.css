@@ -197,3 +197,43 @@ table th {
     flex-direction: column;
   }
 }
+
+.tree-column {
+  margin-bottom: 24px;
+}
+
+.tree-column h3 {
+  font-size: 20px;
+  color: #ffcc00;
+  border-left: 4px solid #ff6600;
+  padding-left: 10px;
+  margin-bottom: 12px;
+}
+
+.tree-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #333;
+  color: #ddd;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.skill-card.unlocked {
+  border-color: #00ff99;
+  box-shadow: 0 0 10px #00ff99;
+  background: #021;
+  color: #fff;
+}
+
+.skill-card:hover {
+  transform: scale(1.02);
+}
+
