@@ -1,87 +1,221 @@
-<!DOCTYPE html>
-<html lang="en">
+/* === GLOBAL STYLES === */
+body {
+  background-color: #0c0c0c;
+  color: #f4f4f4;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  zoom: 110%;
+}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ghostroot: Cyber Ops Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="skull-icon.png" />
-</head>
+h1, h2, h3 {
+  color: #ff6a00;
+  letter-spacing: 1px;
+}
 
-<body>
-  <header>
-    <h1>☠️ GHOSTROOT: CYBER OPS DASHBOARD</h1>
-    <p class="tagline">"For the Vault. For the Mission. For the Root."</p>
-    <nav class="tabs responsive-tabs">
-      <button class="tab active" data-tab="status">🎮 Status</button>
-      <button class="tab" data-tab="xp">📈 Specializations</button>
-      <button class="tab" data-tab="skilltree">🧬 Skill Tree</button>
-      <a class="codex-link" href="https://github.com/RobinV87/Neurovault" target="_blank">📄 Open Full Codex</a>
-    </nav>
-  </header>
+h2 {
+  margin-left: 1rem;
+  color: #00aaff;
+  text-shadow: 0 0 6px #00aaff;
+}
 
-  <main>
-    <!-- STATUS TAB -->
-    <section id="status" class="tab-content active">
-      <h2>🔹 Identity & Core Stats</h2>
-      <div class="card">
-        <h3>🏛️ Identity</h3>
-        <ul id="identity-data"></ul>
-      </div>
+h3 {
+  color: #ffcc00;
+}
 
-      <div class="card">
-        <h3>📊 Core Stats</h3>
-        <table id="corestats-table">
-          <thead>
-            <tr><th>Stat</th><th>Value</th></tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+/* === HEADER & NAV === */
+header {
+  background: linear-gradient(to right, #ff6a00, #ffaa00);
+  color: #000;
+  padding: 1rem;
+  box-shadow: 0 4px 10px #00000088;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
-      <div class="card">
-        <h3>🎮 Level & XP</h3>
-        <p>Level: <span id="level-status"></span></p>
-        <div class="xp-bar">
-          <div class="xp-bar-fill">0 / 0 XP</div>
-        </div>
-      </div>
-    </section>
+header h1 {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
 
-    <!-- XP TAB -->
-    <section id="xp" class="tab-content">
-      <h2>🏆 Titles & Specializations</h2>
+.tagline {
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  color: #222;
+}
 
-      <div class="card">
-        <h3>🥇 Titles Earned</h3>
-        <ul id="milestone-list"></ul>
-      </div>
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
 
-      <div class="card">
-        <h3>🌱 Specializations</h3>
-        <table id="specialization-table">
-          <thead>
-            <tr><th>Discipline</th><th>Rank</th><th>Notes</th></tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+.tab, .codex-link {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #111;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 5px #000000aa;
+  text-decoration: none;
+}
 
-      <div class="card">
-        <h3>🏁 Focus Specialization</h3>
-        <p id="focus-specialization">Loading...</p>
-      </div>
-    </section>
+.tab:hover, .codex-link:hover {
+  background: #333;
+  color: #ffaa00;
+}
 
-    <!-- SKILL TREE TAB -->
-    <section id="skilltree" class="tab-content">
-      <h2>🧬 Cyber Skill Tree</h2>
-      <div class="skill-tree-paths" id="skill-tree-container"></div>
-    </section>
-  </main>
+.tab.active {
+  background: #ffaa00;
+  color: #000;
+}
 
-  <script src="script.js"></script>
-</body>
+/* === MAIN SECTION === */
+main {
+  padding: 1rem;
+}
 
-</html>
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* === CARD STYLE BOXES === */
+.card {
+  background: #111;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 15px #00ff8899;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px #00ff88;
+}
+
+/* === TABLES === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th, td {
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  background-color: #111;
+  color: #ffcc00;
+}
+
+td {
+  background-color: #1a1a1a;
+}
+
+/* === XP BAR === */
+.xp-bar {
+  background-color: #333;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+.xp-bar-fill {
+  background: linear-gradient(to right, #ffaa00, #ff5500);
+  height: 100%;
+  text-align: center;
+  color: black;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* === SPECIALIZATIONS === */
+#specialization-table td {
+  color: #aaff44;
+}
+
+#focus-specialization {
+  color: #00aaff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* === SKILL TREE === */
+.skill-tree-paths {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.skill-path {
+  flex: 1 1 30%;
+}
+
+.skill-path h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.skill-card {
+  background: #111;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #555;
+  transition: all 0.3s ease;
+}
+
+.skill-card.red {
+  border-left: 4px solid #ff4444;
+}
+
+.skill-card.blue {
+  border-left: 4px solid #4488ff;
+}
+
+.skill-card.purple {
+  border-left: 4px solid #aa44ff;
+}
+
+.skill-card.unlocked {
+  background: #002200;
+  color: #88ff88;
+  box-shadow: 0 0 15px #00ff00;
+  border-left: 4px solid #00ff00 !important;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .skill-tree-paths {
+    flex-direction: column;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  body {
+    zoom: 100%;
+  }
+}
