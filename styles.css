@@ -1,221 +1,191 @@
-/* === GLOBAL STYLES === */
+/* --------------------
+   Ghostroot Dashboard - CSS v1
+   -------------------- */
+
 body {
-  background-color: #0c0c0c;
-  color: #f4f4f4;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
   font-family: 'Orbitron', sans-serif;
   margin: 0;
   padding: 0;
-  zoom: 110%;
 }
 
-h1, h2, h3 {
-  color: #ff6a00;
-  letter-spacing: 1px;
-}
-
-h2 {
-  margin-left: 1rem;
-  color: #00aaff;
-  text-shadow: 0 0 6px #00aaff;
-}
-
-h3 {
-  color: #ffcc00;
-}
-
-/* === HEADER & NAV === */
 header {
-  background: linear-gradient(to right, #ff6a00, #ffaa00);
-  color: #000;
-  padding: 1rem;
-  box-shadow: 0 4px 10px #00000088;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px #ff6600;
 }
 
-header h1 {
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.2rem;
+h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #fff;
 }
 
 .tagline {
-  font-size: 0.85rem;
-  margin-top: -0.5rem;
-  color: #222;
+  font-size: 14px;
+  margin-top: 4px;
+  color: #ffcc99;
 }
 
 .tabs {
+  margin-top: 10px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  justify-content: center;
+  gap: 8px;
 }
 
-.tab, .codex-link {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
+.tabs .tab,
+.codex-link {
   background: #111;
+  border: 1px solid #444;
+  border-radius: 6px;
   color: #fff;
-  font-weight: bold;
+  padding: 6px 12px;
   cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 5px #000000aa;
   text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
 }
 
-.tab:hover, .codex-link:hover {
-  background: #333;
-  color: #ffaa00;
-}
-
-.tab.active {
-  background: #ffaa00;
-  color: #000;
-}
-
-/* === MAIN SECTION === */
-main {
-  padding: 1rem;
+.tabs .tab.active,
+.tabs .tab:hover,
+.codex-link:hover {
+  background-color: #ff6a00;
+  color: black;
 }
 
 .tab-content {
   display: none;
+  padding: 20px;
 }
 
 .tab-content.active {
   display: block;
 }
 
-/* === CARD STYLE BOXES === */
+h2 {
+  font-size: 22px;
+  color: #ffa500;
+  margin-bottom: 10px;
+}
+
 .card {
   background: #111;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1rem 0;
-  box-shadow: 0 0 15px #00ff8899;
-  transition: 0.3s;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
 }
 
-.card:hover {
-  box-shadow: 0 0 25px #00ff88;
+.card h3 {
+  font-size: 18px;
+  color: #ffcc00;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* === TABLES === */
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 0.5rem;
+  background: #000;
+  border: 1px solid #333;
 }
 
-th, td {
-  padding: 0.6rem 1rem;
-  text-align: left;
-  border-bottom: 1px solid #333;
+table thead {
+  background: #222;
 }
 
-th {
-  background-color: #111;
+table th, table td {
+  padding: 8px 10px;
+  border: 1px solid #333;
+}
+
+table th {
   color: #ffcc00;
+  text-align: left;
 }
 
-td {
-  background-color: #1a1a1a;
-}
-
-/* === XP BAR === */
 .xp-bar {
   background-color: #333;
-  border-radius: 6px;
+  height: 22px;
+  border-radius: 8px;
   overflow: hidden;
-  height: 1.2rem;
-  margin-top: 0.4rem;
+  margin-top: 6px;
 }
 
 .xp-bar-fill {
-  background: linear-gradient(to right, #ffaa00, #ff5500);
+  background: linear-gradient(to right, #ffa500, #ff4500);
   height: 100%;
-  text-align: center;
+  width: 0;
   color: black;
-  font-size: 0.8rem;
+  text-align: center;
   font-weight: bold;
+  transition: width 0.5s ease-in-out;
 }
 
-/* === SPECIALIZATIONS === */
-#specialization-table td {
-  color: #aaff44;
-}
-
-#focus-specialization {
-  color: #00aaff;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-/* === SKILL TREE === */
 .skill-tree-paths {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .skill-path {
-  flex: 1 1 30%;
+  padding: 10px 0;
 }
 
 .skill-path h3 {
-  margin-bottom: 0.5rem;
   color: #fff;
-  font-size: 1.3rem;
-  border-bottom: 2px solid #444;
-  padding-bottom: 0.5rem;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-left: 4px solid #ff6600;
+  padding-left: 10px;
 }
 
-.skill-card {
+.skill-node {
   background: #111;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #555;
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #333;
+  color: #ddd;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
-.skill-card.red {
-  border-left: 4px solid #ff4444;
+.skill-node.unlocked {
+  border-color: #00ff99;
+  box-shadow: 0 0 10px #00ff99;
+  background: #021;
+  color: #fff;
 }
 
-.skill-card.blue {
-  border-left: 4px solid #4488ff;
+.skill-node.red {
+  border-left: 4px solid red;
 }
 
-.skill-card.purple {
-  border-left: 4px solid #aa44ff;
+.skill-node.blue {
+  border-left: 4px solid deepskyblue;
 }
 
-.skill-card.unlocked {
-  background: #002200;
-  color: #88ff88;
-  box-shadow: 0 0 15px #00ff00;
-  border-left: 4px solid #00ff00 !important;
+.skill-node.purple {
+  border-left: 4px solid violet;
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .skill-tree-paths {
-    flex-direction: column;
-  }
-
   .tabs {
     flex-direction: column;
-    gap: 0.25rem;
+    align-items: center;
   }
 
-  body {
-    zoom: 100%;
+  .skill-tree-paths {
+    flex-direction: column;
   }
 }
