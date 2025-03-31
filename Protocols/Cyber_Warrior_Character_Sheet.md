@@ -27,7 +27,7 @@
 
 ## 📈 XP / Progression
 
-- **Current XP:** 235 / 400 
+- **Current XP:** 285 / 400 
 - **Level:** 3  
 - **Progress Bar:** :::::::::: (100%)  
 - **Next Level Bonus:** +10 Stat Points, Unlock Specialization Branch
@@ -86,6 +86,9 @@
 | 2025-03-26 | Investigated exposed server (security risk)   |
 | 2025-03-27 | Teams call log troubleshooting                |
 | 2025-03-27 | Azure SLAs and Availability Zones             |
-| 2025-30-28 | MS Certification Exam Workflow                |
+| 2025-03-28 | MS Certification Exam Workflow                |
+| 2025-03-31 | nmap recon in real-world IR                   |
+| 2025-03-31 | WiFi troubleshooting Flow (forget/rejoin)     |
+| 2025-03-31 | Draytek Firewall Diagnostics                  |
 
 ---
