@@ -12,7 +12,13 @@ Received alert of a potentially exposed web interface, indicating a possible ext
 - Ran `nmap` to scan for open ports  
 - Attempted to access discovered ports  
 - Encountered `404 Not Found`, confirming web server presence without active content  
-- Performed basic recon to assess possible risks and data exposure  
+- Performed basic recon to assess possible risks and data exposure
+
+- nmap scan results:
+- Open POrts: 80, 443, 5060, 8008
+
+- What is the most sensative one?
+- 5060 is most sensative, should be behind a firewall
 
 ## ✅ Outcome  
 - Delivered findings to team and reported back to the customer  
