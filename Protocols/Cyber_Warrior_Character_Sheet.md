@@ -27,7 +27,7 @@
 
 ## 📈 XP / Progression
 
-- **Current XP:** 285 / 400 
+- **Current XP:** 325 / 400 
 - **Level:** 3  
 - **Progress Bar:** :::::::::: (100%)  
 - **Next Level Bonus:** +10 Stat Points, Unlock Specialization Branch
